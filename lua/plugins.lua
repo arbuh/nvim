@@ -32,7 +32,6 @@ local function plugins(use)
 
     -- Automatically set up configuration after cloning packer.nvim
     if packer_bootstrap then
-        print "Restart Neovim to finish the packer.nvim setup!"
         require('packer').sync()
     end
 end
