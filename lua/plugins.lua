@@ -30,6 +30,15 @@ local function plugins(use)
         end,
     }
 
+    -- Status line
+    use {
+        'nvim-lualine/lualine.nvim',
+        config = function()
+            require('lualine').setup()
+        end,
+        requires = { 'kyazdani42/nvim-web-devicons' }
+    }
+
     -- Automatically set up configuration after cloning packer.nvim
     if packer_bootstrap then
         require('packer').sync()
