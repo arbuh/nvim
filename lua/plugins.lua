@@ -24,19 +24,23 @@ local function plugins(use)
 
     -- Color schema
     use {
-        'tanvirtin/monokai.nvim',
+        'RRethy/nvim-base16',
         config = function()
-            vim.cmd "colorscheme monokai_soda"
+            vim.cmd "colorscheme base16-monokai"
         end,
     }
 
     -- Status line
     use {
         'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true },
         config = function()
-            require('lualine').setup()
+            require('lualine').setup({
+                options = {
+                    theme = 'base16'
+                }
+            })
         end,
-        requires = { 'kyazdani42/nvim-web-devicons' }
     }
 
     -- Automatically set up configuration after cloning packer.nvim
@@ -48,4 +52,5 @@ end
 local packer = require('packer')
 packer.init(conf)
 packer.startup(plugins)
+
 
