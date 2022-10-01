@@ -1,4 +1,6 @@
-require('nvim-tree').setup({
+local nvimtree = require('nvim-tree')
+
+local conf = {
     sort_by = 'case_sensitive',
     open_on_setup = true,
     disable_netrw = true,
@@ -10,5 +12,7 @@ require('nvim-tree').setup({
     renderer = {
         group_empty = true,
     },
-})
+}
+
+nvimtree.setup(conf)
 
