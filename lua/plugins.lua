@@ -1,7 +1,7 @@
 local conf = {
     display = {
         open_fn = function()
-            return require("packer.util").float { border = "rounded" }
+            return require('packer.util').float { border = 'rounded' }
         end,
     }
 }
@@ -26,7 +26,7 @@ local function plugins(use)
     use {
         'RRethy/nvim-base16',
         config = function()
-            vim.cmd "colorscheme base16-monokai"
+            vim.cmd 'colorscheme base16-monokai'
         end,
     }
     
@@ -34,7 +34,7 @@ local function plugins(use)
     use {
         'kyazdani42/nvim-web-devicons',
         config = function()
-            require("nvim-web-devicons").setup { default = true }
+            require('nvim-web-devicons').setup { default = true }
         end,
     }
 
@@ -63,6 +63,14 @@ local function plugins(use)
         'kyazdani42/nvim-tree.lua',
         config = function()
             require("config.nvimtree")
+        end,
+    }
+    
+    -- Key mappings
+    use {
+        'folke/which-key.nvim',
+        config = function()
+            require('config.whichkey')
         end,
     }
 
