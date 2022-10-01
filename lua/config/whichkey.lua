@@ -16,6 +16,7 @@ local mappings = {
     f = {
         name = 'Files',
         e = { '<cmd>NvimTreeToggle<cr>', 'Explorer' },
+        f = { '<cmd>NvimTreeFocus<cr>', 'Focus to explorer' },
     },
     z = {
         name = 'Packer',
