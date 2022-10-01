@@ -29,11 +29,18 @@ local function plugins(use)
             vim.cmd "colorscheme base16-monokai"
         end,
     }
+    
+     -- Icons (required by some plugins)
+    use {
+        'kyazdani42/nvim-web-devicons',
+        config = function()
+            require("nvim-web-devicons").setup { default = true }
+        end,
+    }
 
     -- Status line
     use {
         'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true },
         config = function()
             require('lualine').setup({
                 options = {
