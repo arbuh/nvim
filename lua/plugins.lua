@@ -58,6 +58,14 @@ local function plugins(use)
         end
     }
 
+    -- File explorer
+    use {
+        'kyazdani42/nvim-tree.lua',
+        config = function()
+            require("config.nvimtree")
+        end,
+    }
+
     -- Automatically set up configuration after cloning packer.nvim
     if packer_bootstrap then
         require('packer').sync()
