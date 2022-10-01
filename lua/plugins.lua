@@ -74,6 +74,14 @@ local function plugins(use)
         end,
     }
 
+    -- Buffers management
+    use {
+        'akinsho/nvim-bufferline.lua',
+        config = function()
+            require('config.bufferline')
+        end,
+    }
+
     -- Automatically set up configuration after cloning packer.nvim
     if packer_bootstrap then
         require('packer').sync()
