@@ -7,13 +7,28 @@ local conf = {
     },
 }
 
+local opts = {
+    mode = 'n',
+    -- Mappings defined here starts with leader
+    prefix = '<leader>',
+}
+
 local mappings = {
     f = {
-      name = 'Files',
+        name = 'Files',
         e = { '<cmd>NvimTreeToggle<cr>', 'Explorer' },
+    },
+    z = {
+        name = 'Packer',
+        c = { '<cmd>PackerCompile<cr>', 'Compile' },
+        C = { '<cmd>PackerClean<cr>', 'Compile' },
+        i = { '<cmd>PackerInstall<cr>', 'Install' },
+        s = { '<cmd>PackerSync<cr>', 'Sync' },
+        S = { '<cmd>PackerStatus<cr>', 'Status' },
+        u = { '<cmd>PackerUpdate<cr>', 'Update' },
     },
 }
 
 whichkey.setup(conf)
-whichkey.register(mappings)
+whichkey.register(mappings, opts)
 

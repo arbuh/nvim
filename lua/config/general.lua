@@ -1,4 +1,5 @@
 local opt = vim.opt
+local g = vim.g
 
 -- General
 opt.wildmode = 'longest,list' -- get bash-like tab completions
@@ -23,4 +24,7 @@ opt.shiftwidth = 4                   -- width for autoindents
 opt.expandtab = true                 -- converts tabs to white space
 opt.shiftwidth = 4                   -- width for autoindents
 vim.cmd('syntax on')                -- syntax highlighting
+
+-- Leader
+g.mapleader = ';'
 
