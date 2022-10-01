@@ -9,8 +9,7 @@ local conf = {
 
 local opts = {
     mode = 'n',
-    -- Mappings defined here starts with leader
-    prefix = '<leader>',
+    prefix = '',
 }
 
 local mappings = {
