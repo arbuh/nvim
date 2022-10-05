@@ -18,6 +18,6 @@ keymap('n', '<C-q>', ':q<CR>', default_opts) -- use this command to close a spli
 keymap('n', '<S-h>', ':bprevious<CR>', default_opts)
 keymap('n', '<S-l>', ':bnext<CR>', default_opts)
 keymap('n', '<S-q>', ':bp<bar>sp<bar>bn<bar>bd<CR>', default_opts) -- this commands sequence prevents focus on Nvim tree after buffer delete
-keymap('n', '<S-a>', ':BufferLineCloseLeft<CR>', default_opts)
-keymap('n', '<S-s>', ':BufferLineCloseRight<CR>', default_opts)
+keymap('n', '<S-s>', ':BufferLineCloseLeft<CR>', default_opts)
+keymap('n', '<S-d>', ':BufferLineCloseRight<CR>', default_opts)
 

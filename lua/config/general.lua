@@ -29,8 +29,20 @@ vim.cmd('syntax on')                -- syntax highlighting
 g.mapleader = ';'
 
 -- Search
-opt.path:remove "/usr/include" -- remove /usr/include from the search area
-opt.path:append "**" -- add all subdirectories of the current project
+opt.path:remove '/usr/include' -- remove /usr/include from the search area
+opt.path:append '**' -- add all subdirectories of the current project
 opt.wildignorecase = true -- make the search case-insensitive
-opt.wildignore:append "**/.git/*"
+opt.wildignore:append '**/.git/*'
+
+-- Spelling
+opt.spell = true
+opt.spelllang = 'en_us'
+opt.spelloptions = 'camel'
+vim.cmd([[
+    fun! IgnoreCamelCaseSpell()
+        syn match myExCapitalWords +\<\w*[A-Z]\K*\>+ contains=@NoSpell
+    endfun
+
+    autocmd BufRead,BufNewFile * :call IgnoreCamelCaseSpell()
+]])
 
