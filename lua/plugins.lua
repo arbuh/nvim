@@ -82,6 +82,31 @@ local function plugins(use)
         end,
     }
 
+    -- Telescope (advanced search)
+    use {
+        'nvim-telescope/telescope.nvim',
+        opt = true,
+        config = function()
+            require('config.telescope').setup()
+        end,
+        wants = {
+            'plenary.nvim',
+            'popup.nvim',
+            'telescope-fzf-native.nvim',
+            'telescope-project.nvim',
+            'telescope-repo.nvim',
+            'project.nvim',
+        },
+        requires = {
+            'nvim-lua/popup.nvim',
+            'nvim-lua/plenary.nvim',
+            { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
+            'nvim-telescope/telescope-project.nvim',
+            'cljoly/telescope-repo.nvim',
+            'ahmedkhalf/project.nvim',
+        },
+    }
+
     -- Automatically set up configuration after cloning packer.nvim
     if packer_bootstrap then
         require('packer').sync()
