@@ -17,9 +17,8 @@ local conf = {
         enable = true,
         update_cwd = true,
     },
+    respect_buf_cwd = true,
 }
-
-vim.g.nvim_tree_respect_buf_cwd = 1
 
 nvimtree.setup(conf)
 
