@@ -85,9 +85,8 @@ local function plugins(use)
     -- Telescope (advanced search)
     use {
         'nvim-telescope/telescope.nvim',
-        opt = true,
         config = function()
-            require('config.telescope').setup()
+            require('config.telescope')
         end,
         wants = {
             'plenary.nvim',
