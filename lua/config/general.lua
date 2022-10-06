@@ -33,6 +33,8 @@ opt.path:remove '/usr/include' -- remove /usr/include from the search area
 opt.path:append '**' -- add all subdirectories of the current project
 opt.wildignorecase = true -- make the search case-insensitive
 opt.wildignore:append '**/.git/*'
+opt.wildmenu = true
+opt.wildmode='full'
 
 -- Spelling
 opt.spell = true

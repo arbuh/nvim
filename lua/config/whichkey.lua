@@ -9,16 +9,21 @@ local conf = {
 
 local opts = {
     mode = 'n',
-    prefix = '',
+    prefix = '<leader>',
 }
 
 local mappings = {
+    ['e'] = { '<cmd>NvimTreeFocus<cr>', 'Focus to explorer' },
+    ['t'] = { '<cmd>NvimTreeToggle<cr>', 'Toggle explorer' }, 
     f = {
-        name = 'Files',
-        e = { '<cmd>NvimTreeToggle<cr>', 'Explorer' },
-        f = { '<cmd>NvimTreeFocus<cr>', 'Focus to explorer' },
+        name = 'Find',
+        f = { '<cmd>lua require(\'utils.finder\').find_files()<cr>', 'Files' },
+        b = { '<cmd>FzfLua buffers<cr>', 'Buffers' },
+        o = { '<cmd>FzfLua oldfiles<cr>', 'Old files' },
+        --g = { '<cmd>FzfLua live_grep<cr>', 'By grep' },
+        g = { '<cmd>lua require(\'utils.finder\').grep_files()<cr>', 'Using grep' },
     },
-    z = {
+    p = {
         name = 'Packer',
         c = { '<cmd>PackerCompile<cr>', 'Compile' },
         C = { '<cmd>PackerClean<cr>', 'Compile' },

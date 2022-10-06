@@ -82,7 +82,11 @@ local function plugins(use)
         end,
     }
 
+    -- Fuzzy search
+    use 'ibhagwan/fzf-lua'
+
     -- Telescope (advanced search)
+    --[[
     use {
         'nvim-telescope/telescope.nvim',
         config = function()
@@ -104,7 +108,7 @@ local function plugins(use)
             'cljoly/telescope-repo.nvim',
             'ahmedkhalf/project.nvim',
         },
-    }
+    } ]]--
 
     -- Automatically set up configuration after cloning packer.nvim
     if packer_bootstrap then
