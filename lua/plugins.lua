@@ -83,7 +83,9 @@ local function plugins(use)
     }
 
     -- Fuzzy search
-    use 'ibhagwan/fzf-lua'
+    if PLUGINS.fzf_lua.enabled then
+        use 'ibhagwan/fzf-lua'
+    end
 
     -- Telescope (advanced search)
     --[[
