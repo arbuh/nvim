@@ -85,6 +85,8 @@ local function plugins(use)
     -- Telescope (Advanced UI for fuzzy search)
     use {
         'nvim-telescope/telescope.nvim',
+        opt = true,
+        cmd = "Telescope",
         config = function()
             require('config.telescope')
         end,
