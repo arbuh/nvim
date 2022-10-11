@@ -82,36 +82,29 @@ local function plugins(use)
         end,
     }
 
-    -- Fuzzy search
-    if PLUGINS.fzf_lua.enabled then
-        use 'ibhagwan/fzf-lua'
-    end
-
-    -- Telescope (another fuzzy search plugin)
-    if PLUGINS.fzf_lua.enabled then
-        use {
-            'nvim-telescope/telescope.nvim',
-            config = function()
-                require('config.telescope')
-            end,
-            wants = {
-                'plenary.nvim',
-                'popup.nvim',
-                'telescope-fzf-native.nvim',
-                'telescope-project.nvim',
-                'telescope-repo.nvim',
-                'project.nvim',
-            },
-            requires = {
-                'nvim-lua/popup.nvim',
-                'nvim-lua/plenary.nvim',
-                { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
-                'nvim-telescope/telescope-project.nvim',
-                'cljoly/telescope-repo.nvim',
-                'ahmedkhalf/project.nvim',
-            },
-        }
-    end
+    -- Telescope (Advanced UI for fuzzy search)
+    use {
+        'nvim-telescope/telescope.nvim',
+        config = function()
+            require('config.telescope')
+        end,
+        wants = {
+            'plenary.nvim',
+            'popup.nvim',
+            'telescope-fzf-native.nvim',
+            'telescope-project.nvim',
+            'telescope-repo.nvim',
+             'project.nvim',
+         },
+         requires = {
+            'nvim-lua/popup.nvim',
+            'nvim-lua/plenary.nvim',
+            { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
+            'nvim-telescope/telescope-project.nvim',
+            'cljoly/telescope-repo.nvim',
+            'ahmedkhalf/project.nvim',
+        },
+    }
 
     -- Automatically set up configuration after cloning packer.nvim
     if packer_bootstrap then

@@ -12,23 +12,17 @@ local opts = {
     prefix = '<leader>',
 }
 
-local find_mapping = nil
-
-if PLUGINS.fzf_lua.enabled then
-    find_mapping = {
+local mappings = {
+    ['e'] = { '<cmd>NvimTreeFocus<cr>', 'Focus to explorer' },
+    ['t'] = { '<cmd>NvimTreeToggle<cr>', 'Toggle explorer' }, 
+--[[    f = {
         name = 'Find',
         f = { '<cmd>lua require(\'utils.finder\').find_files()<cr>', 'Files' },
         b = { '<cmd>FzfLua buffers<cr>', 'Buffers' },
         o = { '<cmd>FzfLua oldfiles<cr>', 'Old files' },
         g = { '<cmd>lua require(\'utils.finder\').grep_files()<cr>', 'Using grep' },
         t = { '<cmd>lua require(\'utils.finder\').test_plugins()<cr>', 'Test' },
-    }
-end
-
-local mappings = {
-    ['e'] = { '<cmd>NvimTreeFocus<cr>', 'Focus to explorer' },
-    ['t'] = { '<cmd>NvimTreeToggle<cr>', 'Toggle explorer' }, 
-    f = find_mapping,
+    },]]--
     p = {
         name = 'Packer',
         c = { '<cmd>PackerCompile<cr>', 'Compile' },
