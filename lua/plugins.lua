@@ -87,6 +87,7 @@ local function plugins(use)
         'nvim-telescope/telescope.nvim',
         opt = true,
         cmd = "Telescope",
+        module = 'telescope',
         config = function()
             require('config.telescope')
         end,

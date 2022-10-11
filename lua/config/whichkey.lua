@@ -15,14 +15,15 @@ local opts = {
 local mappings = {
     ['e'] = { '<cmd>NvimTreeFocus<cr>', 'Focus to explorer' },
     ['t'] = { '<cmd>NvimTreeToggle<cr>', 'Toggle explorer' }, 
---[[    f = {
+    f = {
         name = 'Find',
         f = { '<cmd>lua require(\'utils.finder\').find_files()<cr>', 'Files' },
-        b = { '<cmd>FzfLua buffers<cr>', 'Buffers' },
-        o = { '<cmd>FzfLua oldfiles<cr>', 'Old files' },
-        g = { '<cmd>lua require(\'utils.finder\').grep_files()<cr>', 'Using grep' },
-        t = { '<cmd>lua require(\'utils.finder\').test_plugins()<cr>', 'Test' },
-    },]]--
+        b = { '<cmd>Telescope buffers<cr>', 'Buffers' },
+        o = { '<cmd>Telescope oldfiles<cr>', 'Old files' },
+        g = { '<cmd>Telescope live_grep<cr>', 'Using grep' },
+        t = { '<cmd>Telescope current_buffer_fuzzy_find<cr>', 'In the current buffer' },
+        c = { '<cmd>Telescope git_commits<cr>', 'Git commits' },
+    },
     p = {
         name = 'Packer',
         c = { '<cmd>PackerCompile<cr>', 'Compile' },
