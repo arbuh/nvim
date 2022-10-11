@@ -1,4 +1,4 @@
-local M = {}
+local finder = {}
 
 local telescope = require 'telescope.builtin'
 
@@ -7,7 +7,7 @@ function is_inside_git()
     return vim.v.shell_error == 0
 end
 
-function M.find_files()
+function finder.find_files()
     if is_inside_git() then
         telescope.git_files()
     else
@@ -15,5 +15,5 @@ function M.find_files()
     end
 end
 
-return M
+return finder
 
