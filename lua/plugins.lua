@@ -109,6 +109,9 @@ local function plugins(use)
         },
     }
 
+    -- Automatic change the working directory on a file open
+    use 'airblade/vim-rooter'
+
     -- Automatically set up configuration after cloning packer.nvim
     if packer_bootstrap then
         require('packer').sync()
