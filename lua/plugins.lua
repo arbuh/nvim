@@ -113,23 +113,14 @@ local function plugins(use)
     -- Automatic change of the working directory on a file open
     use 'airblade/vim-rooter'
 
-    -- Git
---    use 'tpope/vim-fugitive'
---[[    use {
-        'tanvirtin/vgit.nvim',
-        config = function()
-            require('vgit').setup()
-            vim.cmd 'set statusline+=%{get(b:,\'vgit_status\',\'\')}'
-        end,
-    }]]--
---[[    use {
-        'TimUntersberger/neogit',
-        config = function()
-            require('neogit').setup()
-        end,
-    }]]--
     -- Git blame
-    use 'f-person/git-blame.nvim'
+    use {
+        'f-person/git-blame.nvim',
+        config = function()
+            vim.g.gitblame_enabled = 0
+            vim.g.gitblame_date_format = '%d-%m-%y %H:%M'
+        end,
+    }
 
     -- Git Diff
     use 'sindrets/diffview.nvim'
