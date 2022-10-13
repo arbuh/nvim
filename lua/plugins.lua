@@ -128,7 +128,11 @@ local function plugins(use)
             require('neogit').setup()
         end,
     }]]--
+    -- Git blame
     use 'f-person/git-blame.nvim'
+
+    -- Git Diff
+    use 'sindrets/diffview.nvim'
 
     -- Automatically set up configuration after cloning packer.nvim
     if packer_bootstrap then
