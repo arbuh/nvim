@@ -38,6 +38,9 @@ local function plugins(use)
         end,
     }
 
+    -- Helper libraries (required by some plugins)
+    use 'nvim-lua/plenary.nvim'
+
     -- Status line
     use {
         'nvim-lualine/lualine.nvim',
@@ -92,7 +95,6 @@ local function plugins(use)
             require('config.telescope')
         end,
         wants = {
-            'plenary.nvim',
             'popup.nvim',
             'telescope-fzf-native.nvim',
             'telescope-project.nvim',
@@ -101,7 +103,6 @@ local function plugins(use)
          },
          requires = {
             'nvim-lua/popup.nvim',
-            'nvim-lua/plenary.nvim',
             { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
             'nvim-telescope/telescope-project.nvim',
             'cljoly/telescope-repo.nvim',
@@ -113,7 +114,21 @@ local function plugins(use)
     use 'airblade/vim-rooter'
 
     -- Git
-    use 'tpope/vim-fugitive'
+--    use 'tpope/vim-fugitive'
+--[[    use {
+        'tanvirtin/vgit.nvim',
+        config = function()
+            require('vgit').setup()
+            vim.cmd 'set statusline+=%{get(b:,\'vgit_status\',\'\')}'
+        end,
+    }]]--
+--[[    use {
+        'TimUntersberger/neogit',
+        config = function()
+            require('neogit').setup()
+        end,
+    }]]--
+    use 'f-person/git-blame.nvim'
 
     -- Automatically set up configuration after cloning packer.nvim
     if packer_bootstrap then

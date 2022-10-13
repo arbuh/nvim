@@ -35,6 +35,11 @@ local mappings = {
         S = { '<cmd>PackerStatus<cr>', 'Status' },
         u = { '<cmd>PackerUpdate<cr>', 'Update' },
     },
+    g = {
+        name = 'Git',
+        b = { '<cmd>GitBlameToggle<cr>', 'Toggle blame' },
+        o = { '<cmd>GitBlameOpenCommitURL<cr>', 'Open commit' },
+    },
 }
 
 whichkey.setup(conf)
