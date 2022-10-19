@@ -124,6 +124,14 @@ local function plugins(use)
 
     -- Git Diff
     use 'sindrets/diffview.nvim'
+    
+    -- Metals (Scala LSP)
+    use {
+        'scalameta/nvim-metals',
+        config = function()
+            require("config.lsp")
+        end,
+    }
 
     -- Automatically set up configuration after cloning packer.nvim
     if packer_bootstrap then
