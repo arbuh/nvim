@@ -8,14 +8,21 @@ local opts = {
 local mappings = {
     l = {
         name = "LSP",
-        h = { "<Cmd>lua vim.lsp.buf.hover()<CR>", "Definition" },
+        h = { "<Cmd>lua vim.lsp.buf.hover()<CR>", "Hover" },
         d = { "<Cmd>lua vim.lsp.buf.definition()<CR>", "Definition" },
-        D = { "<Cmd>lua vim.lsp.buf.declaration()<CR>", "Declaration" },
-        s = { "<cmd>lua vim.lsp.buf.signature_help()<CR>", "Signature Help" },
         i = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "Implementation" },
-        t = { "<cmd>lua vim.lsp.buf.type_definition()<CR>", "Type Definition" },
+        u = { "<cmd>lua vim.lsp.buf.references()<CR>", "References" },
+        r = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename" },
+        c = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Code actions" },
+        s = { "<cmd>lua vim.lsp.buf.signature_help()<CR>", "Code actions" },
+        f = { "<cmd>lua vim.lsp.buf.formatting()<CR>", "Code actions" },
     },
 }
+
+--[[ Candidates for mapping:
+:MetalsNewScalaFile
+MetalsOrganizeImports
+]]--
 
 whichkey.register(mappings, opts)
 
