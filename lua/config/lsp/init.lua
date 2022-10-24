@@ -5,7 +5,6 @@ vim.opt_global.shortmess:remove("F")
 
 metals = require("metals") 
 
---[[
 local nvim_metals_group = vim.api.nvim_create_augroup("nvim-metals", { clear = true })
   vim.api.nvim_create_autocmd("FileType", {
     pattern = { "scala", "sbt", "java" },
@@ -14,7 +13,6 @@ local nvim_metals_group = vim.api.nvim_create_augroup("nvim-metals", { clear = t
     end,
     group = nvim_metals_group,
   })
-  ]]
 
 metals.initialize_or_attach({})
 
@@ -28,6 +26,4 @@ metals_config.settings = {
         "com.github.swagger.akka.javadsl"
     }
 }
-
-print("test000")
 
