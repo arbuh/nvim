@@ -13,6 +13,7 @@ local opts = {
 }
 
 local mappings = {
+    ['q'] = { '<cmd>qa<cr>', 'Close vim' },
     ['e'] = { '<cmd>NvimTreeFocus<cr>', 'Focus to explorer' },
     ['t'] = { '<cmd>NvimTreeToggle<cr>', 'Toggle explorer' }, 
     ['r'] = { '<cmd>Telescope project<cr>', 'List projects' }, 
@@ -38,7 +39,7 @@ local mappings = {
     g = {
         name = 'Git',
         b = { '<cmd>GitBlameToggle<cr>', 'Toggle blame' },
-        o = { '<cmd>GitBlameOpenCommitURL<cr>', 'Open commit' },
+        o = { '<cmd>GitBlameOpenCommitURL<cr>', 'Open commit in a browser' },
         m = { '<cmd>lua require(\'utils.git\').diff_with_main()<cr>', 'Diff with main' },
         c = { '<cmd>DiffviewClose<cr>', 'Close diff' },
     },

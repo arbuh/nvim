@@ -1,9 +1,8 @@
 local keymap = vim.api.nvim_set_keymap
 local default_opts = { noremap = true, silent = true }
 
--- Save/Close
+-- Save
 keymap('n', '<S-w>', ':w<CR>', default_opts)
-keymap('n', '<S-x>', ':qa<CR>', default_opts)
 
 -- Splits
 keymap('n', '<C-h>', '<C-w><Left>', default_opts)
