@@ -133,6 +133,20 @@ local function plugins(use)
         end,
     }
 
+    -- Code completion
+    use {
+        "hrsh7th/nvim-cmp",
+        requires = {
+            "hrsh7th/cmp-nvim-lsp",
+            "hrsh7th/cmp-vsnip",
+            "hrsh7th/vim-vsnip",
+            "hrsh7th/cmp-buffer",
+        },
+        config = function()
+            require("config.cmp")
+        end,
+    }
+
     -- Automatically set up configuration after cloning packer.nvim
     if packer_bootstrap then
         require('packer').sync()
