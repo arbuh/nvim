@@ -6,10 +6,10 @@ local opts = {
 }
 
 local mappings = {
-    l = {
-        name = "LSP",
-        h = { "<Cmd>lua vim.lsp.buf.hover()<CR>", "Hover" },
-        d = { "<Cmd>lua vim.lsp.buf.definition()<CR>", "Definition" },
+    ['h'] = { "<Cmd>lua vim.lsp.buf.hover()<CR>", "Hover" },
+    ['d'] = { "<Cmd>lua vim.lsp.buf.definition()<CR>", "Definition" },
+    c = {
+        name = "Code",
         i = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "Implementation" },
         u = { "<cmd>lua vim.lsp.buf.references()<CR>", "References" },
         r = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename" },
@@ -17,12 +17,15 @@ local mappings = {
         s = { "<cmd>lua vim.lsp.buf.signature_help()<CR>", "Code actions" },
         f = { "<cmd>lua vim.lsp.buf.formatting()<CR>", "Code actions" },
     },
+    m = {
+        name = "Metals",
+        n = { "<cmd>MetalsNewScalaFile<CR>", "New Scala file" },
+        o = { "<cmd>MetalsOrganizeImports<CR>", "Organize import" },
+        s = { "<cmd>MetalsStartServer<CR>", "Start server" },
+        i = { "<cmd>MetalsInfo<CR>", "Info" },
+        p = { "<cmd>MetalsStartServer<CR>", "New Scala project" },
+    },
 }
-
---[[ Candidates for mapping:
-:MetalsNewScalaFile
-MetalsOrganizeImports
-]]--
 
 whichkey.register(mappings, opts)
 
