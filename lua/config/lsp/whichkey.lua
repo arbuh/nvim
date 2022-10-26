@@ -16,6 +16,7 @@ local mappings = {
         c = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Code actions" },
         s = { "<cmd>lua vim.lsp.buf.signature_help()<CR>", "Code actions" },
         f = { "<cmd>lua vim.lsp.buf.formatting()<CR>", "Code actions" },
+        d = { "<cmd>lua vim.diagnostic.setqflist()<CR>", "Diagnostics" },
     },
     m = {
         name = "Metals",
