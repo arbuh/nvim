@@ -5,17 +5,6 @@ vim.opt_global.shortmess:remove("F")
 
 metals = require("metals") 
 
-local nvim_metals_group = vim.api.nvim_create_augroup("nvim-metals", { clear = true })
-  vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "scala", "sbt", "java" },
-    callback = function()
-      metals.initialize_or_attach({})
-    end,
-    group = nvim_metals_group,
-  })
-
-metals.initialize_or_attach({})
-
 metals_config = metals.bare_config()
 
 -- Enable messages from Metals
@@ -31,4 +20,14 @@ metals_config.settings = {
 }
 
 metals_config.capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+-- Autocmd to start Metals
+local nvim_metals_group = vim.api.nvim_create_augroup("nvim-metals", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "scala", "sbt" },
+    callback = function()
+      metals.initialize_or_attach(metals_config)
+    end,
+    group = nvim_metals_group,
+})
 
