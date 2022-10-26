@@ -18,7 +18,10 @@ metals.initialize_or_attach({})
 
 metals_config = metals.bare_config()
 
+-- Enable messages from Metals
+vim.g['metals_status']
 metals_config.init_options.statusBarProvider = "on"
+
 metals_config.settings = {
     showImplicitArguments = true,
     excludedPackages = {
@@ -26,4 +29,6 @@ metals_config.settings = {
         "com.github.swagger.akka.javadsl"
     }
 }
+
+metals_config.capabilities = require("cmp_nvim_lsp").default_capabilities()
 
