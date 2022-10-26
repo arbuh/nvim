@@ -145,6 +145,7 @@ local function plugins(use)
         config = function()
             require("config.cmp")
         end,
+    }
     
     -- Debugging
     use {

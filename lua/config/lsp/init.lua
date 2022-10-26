@@ -8,7 +8,8 @@ metals = require("metals")
 metals_config = metals.bare_config()
 
 -- Enable messages from Metals
-vim.g['metals_status']
+--vim.g['metals_status']
+vim.g.metals_status = true
 metals_config.init_options.statusBarProvider = "on"
 
 metals_config.settings = {
