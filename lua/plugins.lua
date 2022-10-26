@@ -145,6 +145,13 @@ local function plugins(use)
         config = function()
             require("config.cmp")
         end,
+    
+    -- Debugging
+    use {
+        "mfussenegger/nvim-dap",
+        config = function()
+            require("config.dap").setup()
+        end,
     }
 
     -- Automatically set up configuration after cloning packer.nvim
