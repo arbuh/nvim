@@ -151,7 +151,7 @@ local function plugins(use)
     use {
         "mfussenegger/nvim-dap",
         config = function()
-            require("config.dap").setup()
+            require("config.dap")
         end,
     }
 
