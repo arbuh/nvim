@@ -10,7 +10,6 @@ local mappings = {
     ['D'] = { "<Cmd>lua vim.lsp.buf.definition()<CR>", "Definition" },
     c = {
         name = "Code",
-        i = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "Implementation" },
         u = { "<cmd>lua vim.lsp.buf.references()<CR>", "References" },
         r = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename" },
         c = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Code actions" },
