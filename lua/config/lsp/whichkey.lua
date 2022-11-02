@@ -7,7 +7,7 @@ local opts = {
 
 local mappings = {
     ['h'] = { "<Cmd>lua vim.lsp.buf.hover()<CR>", "Hover" },
-    ['d'] = { "<Cmd>lua vim.lsp.buf.definition()<CR>", "Definition" },
+    ['D'] = { "<Cmd>lua vim.lsp.buf.definition()<CR>", "Definition" },
     c = {
         name = "Code",
         i = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "Implementation" },

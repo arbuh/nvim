@@ -1,4 +1,5 @@
--- Debug settings if you're using nvim-dap
+require("config.dap.whichkey")
+
 local dap = require("dap")
 
 dap.configurations.scala = {

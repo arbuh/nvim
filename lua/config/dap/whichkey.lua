@@ -7,7 +7,7 @@ local opts = {
 
 local mappings = {
     d = {
-        name = "Code",
+        name = "Debugger",
         r = { "<cmd>lua require'dap'.continue()<CR>", "Run/continue" },
         b = { "<cmd>lua require'dap'.toggle_breakpoint()<CR>", "Toggle breakpoint" },
         l = { "<cmd>lua require'dap'.run_last()<CR>", "Run last" },
