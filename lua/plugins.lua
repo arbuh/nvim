@@ -150,6 +150,9 @@ local function plugins(use)
     -- Debugging
     use {
         "mfussenegger/nvim-dap",
+        requires = {
+            "rcarriga/nvim-dap-ui",
+        },
         config = function()
             require("config.dap")
         end,

@@ -1,7 +1,14 @@
 require("config.dap.whichkey")
 
-local dap = require("dap")
+local dap, dapui = require("dap"), require("dapui")
+-- Config automatic opening of DAP UI
+dap.listeners.after.event_initialized["dapui_config"] = function()
+    dapui.open()
+end
 
+dapui.setup()
+
+-- Scala configurations
 dap.configurations.scala = {
   {
     type = "scala",
@@ -24,4 +31,5 @@ dap.configurations.scala = {
 metals_config.on_attach = function(client, bufnr)
   require("metals").setup_dap()
 end
+
 
