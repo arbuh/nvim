@@ -45,11 +45,7 @@ local function plugins(use)
     use {
         'nvim-lualine/lualine.nvim',
         config = function()
-            require('lualine').setup({
-                options = {
-                    theme = 'base16'
-                }
-            })
+            require("config.lualine")
         end,
     }
 
