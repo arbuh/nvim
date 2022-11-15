@@ -154,6 +154,9 @@ local function plugins(use)
         end,
     }
 
+    -- Comment lines considering file type
+    use 'tpope/vim-commentary'
+
     -- Automatically set up configuration after cloning packer.nvim
     if packer_bootstrap then
         require('packer').sync()
