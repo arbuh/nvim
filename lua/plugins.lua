@@ -121,6 +121,17 @@ local function plugins(use)
     -- Git Diff
     use 'sindrets/diffview.nvim'
     
+    -- Debugging
+    use {
+        "mfussenegger/nvim-dap",
+        requires = {
+            "rcarriga/nvim-dap-ui",
+        },
+        config = function()
+            require("config.dap")
+        end,
+    }
+    
     -- Metals (Scala LSP)
     use {
         'scalameta/nvim-metals',
@@ -140,17 +151,6 @@ local function plugins(use)
         },
         config = function()
             require("config.cmp")
-        end,
-    }
-    
-    -- Debugging
-    use {
-        "mfussenegger/nvim-dap",
-        requires = {
-            "rcarriga/nvim-dap-ui",
-        },
-        config = function()
-            require("config.dap")
         end,
     }
 

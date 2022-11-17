@@ -22,6 +22,10 @@ metals_config.settings = {
 
 metals_config.capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+metals_config.on_attach = function(client, bufnr)
+  metals.setup_dap()
+end
+
 -- Autocmd to start Metals
 local nvim_metals_group = vim.api.nvim_create_augroup("nvim-metals", { clear = true })
 vim.api.nvim_create_autocmd("FileType", {
