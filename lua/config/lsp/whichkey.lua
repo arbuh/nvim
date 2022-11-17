@@ -24,6 +24,7 @@ local mappings = {
         s = { "<cmd>MetalsStartServer<CR>", "Start server" },
         i = { "<cmd>MetalsInfo<CR>", "Info" },
         p = { "<cmd>MetalsStartServer<CR>", "New Scala project" },
+        s = { "<cmd>lua require('telescope').extensions.metals.commands()<CR>", "Search for commands" },
     },
 }
 
