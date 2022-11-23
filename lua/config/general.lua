@@ -4,18 +4,12 @@ local g = vim.g
 -- General
 opt.wildmode = 'longest,list' -- get bash-like tab completions
 opt.clipboard = 'unnamedplus' -- using system clipboard
-opt.updatetime = 250
+opt.updatetime = 250          -- to faster updates of airblade/vim-gitgutter
 
 -- Lines
 opt.number = true     -- add line numbers
 opt.cursorline = true -- highlight current cursorline
 opt.ttyfast = true    -- speed up scrolling in Vim" Speed up scrolling in Vim
-
--- Search
-opt.ignorecase = true -- case insensitive
-opt.smartcase = true  -- smart search
-opt.hlsearch = true   -- highlight search
-opt.incsearch = true  -- incremental search
 
 -- Coding
 opt.autoindent = true                -- indent a new line the same amount as the line just typed
@@ -30,6 +24,10 @@ vim.cmd('syntax on')                -- syntax highlighting
 g.mapleader = ';'
 
 -- Search
+opt.ignorecase = true -- case insensitive
+opt.smartcase = true  -- smart search
+opt.hlsearch = true   -- highlight search
+opt.incsearch = true  -- incremental search
 opt.path:remove '/usr/include' -- remove /usr/include from the search area
 opt.path:append '**' -- add all subdirectories of the current project
 opt.wildignorecase = true -- make the search case-insensitive
