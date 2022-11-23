@@ -26,6 +26,7 @@ local mappings = {
         t = { '<cmd>Telescope current_buffer_fuzzy_find<cr>', 'In the current buffer' },
         c = { '<cmd>Telescope git_commits<cr>', 'Git commits' },
         r = { '<cmd>Telescope repo list<cr>', 'Repositories' },
+        s = { '<cmd>Telescope lsp_dynamic_workspace_symbols<cr>', 'LSP symbols' },
     },
     p = {
         name = 'Packer',
