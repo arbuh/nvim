@@ -4,6 +4,7 @@ local g = vim.g
 -- General
 opt.wildmode = 'longest,list' -- get bash-like tab completions
 opt.clipboard = 'unnamedplus' -- using system clipboard
+opt.updatetime = 250
 
 -- Lines
 opt.number = true     -- add line numbers

@@ -118,8 +118,11 @@ local function plugins(use)
         end,
     }
 
-    -- Git Diff
+    -- Git diff
     use 'sindrets/diffview.nvim'
+
+    -- Git highlight changes
+    use 'airblade/vim-gitgutter'
     
     -- Debugging
     use {
