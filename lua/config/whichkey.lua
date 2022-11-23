@@ -25,8 +25,9 @@ local mappings = {
         g = { '<cmd>Telescope live_grep<cr>', 'Using grep' },
         t = { '<cmd>Telescope current_buffer_fuzzy_find<cr>', 'In the current buffer' },
         c = { '<cmd>Telescope git_commits<cr>', 'Git commits' },
-        r = { '<cmd>Telescope repo list<cr>', 'Repositories' },
+        g = { '<cmd>Telescope repo list<cr>', 'Repositories' },
         s = { '<cmd>Telescope lsp_dynamic_workspace_symbols<cr>', 'LSP symbols' },
+        r = { '<cmd>lua require(\'spectre\').open_visual({select_word=true})<cr>', 'LSP symbols' },
     },
     p = {
         name = 'Packer',

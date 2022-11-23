@@ -157,6 +157,9 @@ local function plugins(use)
     -- Comment lines considering file type
     use 'tpope/vim-commentary'
 
+    -- Find and replace
+    use 'windwp/nvim-spectre'
+
     -- Automatically set up configuration after cloning packer.nvim
     if packer_bootstrap then
         require('packer').sync()
