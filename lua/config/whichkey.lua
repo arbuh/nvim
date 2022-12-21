@@ -27,7 +27,7 @@ local mappings = {
         c = { '<cmd>Telescope git_commits<cr>', 'Git commits' },
         g = { '<cmd>Telescope repo list<cr>', 'Repositories' },
         s = { '<cmd>Telescope lsp_dynamic_workspace_symbols<cr>', 'LSP symbols' },
-        r = { '<cmd>lua require(\'spectre\').open_visual({select_word=true})<cr>', 'LSP symbols' },
+        r = { '<cmd>lua require(\'spectre\').open_visual({select_word=true})<cr>', 'And replace' },
     },
     p = {
         name = 'Packer',
