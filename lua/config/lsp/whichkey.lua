@@ -14,7 +14,7 @@ local mappings = {
         r = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename" },
         c = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Code actions" },
         s = { "<cmd>lua vim.lsp.buf.signature_help()<CR>", "Signature help" },
-        f = { "<cmd>lua vim.lsp.buf.format { async = true }()<CR>", "Formatting" },
+        f = { "<cmd>lua vim.lsp.buf.format({ async = true })<CR>", "Formatting" },
         d = { "<cmd>lua vim.diagnostic.setqflist()<CR>", "Diagnostics" },
     },
     m = {
