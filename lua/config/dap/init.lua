@@ -1,9 +1,9 @@
 require("config.dap.whichkey")
 
 local dap, dapui = require("dap"), require("dapui")
--- Configure automatic opening of DAP UI
+-- Configure automatic opening of DAP REPL
 dap.listeners.after.event_initialized["dapui_config"] = function()
-    dapui.open()
+    dap.repl.open()
 end
 
 dapui.setup()
