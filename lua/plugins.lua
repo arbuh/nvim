@@ -24,9 +24,9 @@ local function plugins(use)
 
     -- Color schema
     use {
-        'RRethy/nvim-base16',
+        'tanvirtin/monokai.nvim',
         config = function()
-            vim.cmd 'colorscheme base16-monokai'
+            require('monokai').setup { palette = require('monokai') }
         end,
     }
     
