@@ -22,6 +22,13 @@ local packer_bootstrap = ensure_packer()
 local function plugins(use)
     use 'wbthomason/packer.nvim'
 
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        config = function()
+            require("config.treesitter")
+        end,
+    }
+
     -- Color schema
     use {
         'sainnhe/sonokai',
