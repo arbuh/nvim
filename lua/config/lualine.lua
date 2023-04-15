@@ -2,7 +2,7 @@ local lualine = require('lualine')
 
 local conf = {
     options = {
-        theme = 'auto',
+        theme = 'sonokai',
     },
     sections = {
         lualine_c = {

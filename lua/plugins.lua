@@ -24,9 +24,17 @@ local function plugins(use)
 
     -- Color schema
     use {
-        'tanvirtin/monokai.nvim',
+        'sainnhe/sonokai',
         config = function()
-            require('monokai').setup { palette = require('monokai') }
+            -- Enable the 24-bit true color, if it is supported by the terminal emulator
+            vim.api.nvim_exec([[
+                if has('termguicolors')
+                    set termguicolors
+                endif
+            ]], false)
+            vim.g.sonokai_style = 'maia'
+            vim.g.sonokai_better_performance = 1
+            vim.cmd('colorscheme sonokai')
         end,
     }
     
