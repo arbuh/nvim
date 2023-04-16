@@ -151,9 +151,11 @@ local function plugins(use)
             require("config.dap")
         end,
     }
-    
-    -- Metals (Scala LSP)
+
+    -- LSP, including Metals
     use {
+        "neovim/nvim-lspconfig",
+        "williamboman/nvim-lsp-installer",
         'scalameta/nvim-metals',
         config = function()
             require("config.lsp")
