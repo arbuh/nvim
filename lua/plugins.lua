@@ -22,17 +22,14 @@ local packer_bootstrap = ensure_packer()
 local function plugins(use)
     use 'wbthomason/packer.nvim'
 
-    -- Treesitter and its modules
     use {
         'nvim-treesitter/nvim-treesitter',
+        'nvim-treesitter/nvim-treesitter-textobjects',
+        'nvim-treesitter/playground',
         config = function()
-            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-            ts_update()
+            require("config.treesitter")
         end,
     }
-    use 'nvim-treesitter/nvim-treesitter-textobjects'
-    use 'nvim-treesitter/playground'
-    require("config.treesitter")
 
     -- Color schema
     use {

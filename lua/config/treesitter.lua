@@ -1,3 +1,6 @@
+local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+ts_update()
+
 local ts_config = require('nvim-treesitter.configs')
 
 local conf = {
