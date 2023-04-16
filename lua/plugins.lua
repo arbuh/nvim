@@ -31,6 +31,7 @@ local function plugins(use)
         end,
     }
     use 'nvim-treesitter/nvim-treesitter-textobjects'
+    use 'nvim-treesitter/playground'
     require("config.treesitter")
 
     -- Color schema

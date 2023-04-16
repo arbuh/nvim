@@ -44,6 +44,9 @@ local conf = {
             --     ['xx'] = '@class.outer'
             -- },
         }
+    },
+    playground = {
+        enable = true,
     }
 }
 
