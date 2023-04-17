@@ -24,8 +24,10 @@ local function plugins(use)
 
     use {
         'nvim-treesitter/nvim-treesitter',
-        'nvim-treesitter/nvim-treesitter-textobjects',
-        'nvim-treesitter/playground',
+        requires = {
+            'nvim-treesitter/nvim-treesitter-textobjects',
+            'nvim-treesitter/playground',
+        },
         config = function()
             require("config.treesitter")
         end,
@@ -46,7 +48,7 @@ local function plugins(use)
             vim.cmd('colorscheme sonokai')
         end,
     }
-    
+
      -- Icons (required by some plugins)
     use {
         'kyazdani42/nvim-web-devicons',
@@ -81,7 +83,7 @@ local function plugins(use)
             require("config.nvimtree")
         end,
     }
-    
+
     -- Key mappings
     use {
         'folke/which-key.nvim',
@@ -139,8 +141,13 @@ local function plugins(use)
     use 'sindrets/diffview.nvim'
 
     -- Git highlight changes
-    use 'airblade/vim-gitgutter'
-    
+    use {
+        'airblade/vim-gitgutter',
+        config = function()
+            vim.g.gitgutter_map_keys = 0
+        end,
+    }
+
     -- Debugging
     use {
         "mfussenegger/nvim-dap",
@@ -154,9 +161,12 @@ local function plugins(use)
 
     -- LSP, including Metals
     use {
-        "neovim/nvim-lspconfig",
-        "williamboman/nvim-lsp-installer",
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
         'scalameta/nvim-metals',
+    }
+    use {
+        "neovim/nvim-lspconfig",
         config = function()
             require("config.lsp")
         end,

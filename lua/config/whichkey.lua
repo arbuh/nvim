@@ -16,7 +16,6 @@ local mappings = {
     ['q'] = { '<cmd>qa<cr>', 'Close vim' },
     ['e'] = { '<cmd>NvimTreeFocus<cr>', 'Focus to explorer' },
     ['t'] = { '<cmd>NvimTreeToggle<cr>', 'Toggle explorer' }, 
-    ['r'] = { '<cmd>Telescope project<cr>', 'List projects' }, 
     f = {
         name = 'Find',
         F = { '<cmd>lua require(\'utils.finder\').find_files()<cr>', 'Files' },
