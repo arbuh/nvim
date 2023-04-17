@@ -148,11 +148,12 @@ local function plugins(use)
         end,
     }
 
-    -- Debugging
+    -- DAP
     use {
         "mfussenegger/nvim-dap",
         requires = {
             "rcarriga/nvim-dap-ui",
+            "mfussenegger/nvim-dap-python",
         },
         config = function()
             require("config.dap")

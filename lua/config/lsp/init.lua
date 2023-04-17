@@ -36,7 +36,7 @@ for _, ls_name in ipairs(language_servers) do
   setup_language_server(ls_name)
 end
 
--- Customisations per language
+-- Configurations per language
 -- Lua
 lsp_config.lua_ls.setup {
   settings = {

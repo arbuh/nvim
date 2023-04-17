@@ -8,7 +8,8 @@ end
 
 dapui.setup()
 
--- Scala configurations
+-- Configurations per language
+-- Scala
 dap.configurations.scala = {
   {
     type = "scala",
@@ -27,4 +28,7 @@ dap.configurations.scala = {
     },
   },
 }
+
+-- Python
+require("dap-python").setup("python", {})
 
