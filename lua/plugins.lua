@@ -193,6 +193,14 @@ local function plugins(use)
     -- Find and replace
     use 'windwp/nvim-spectre'
 
+    -- Auto-close for brackets and quotes
+    use {
+        'm4xshen/autoclose.nvim',
+        config = function()
+            require("autoclose").setup()
+        end,
+    }
+
     -- Automatically set up configuration after cloning packer.nvim
     if packer_bootstrap then
         require('packer').sync()
