@@ -6,7 +6,7 @@ local opts = {
 }
 
 local mappings = {
-    d = {
+    D = {
         name = "Debugger",
         r = { "<cmd>lua require'dap'.continue()<CR>", "Run/continue" },
         b = { "<cmd>lua require'dap'.toggle_breakpoint()<CR>", "Toggle breakpoint" },
