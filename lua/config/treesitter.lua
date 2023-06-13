@@ -9,6 +9,7 @@ local conf = {
     auto_install = true,
     highlight = {
         enable = true,
+        disable = { "lua", "python", "scala"}, -- Some languages with LSP setup are disabled here to hide useless warnings from treesitter for them
         additional_vim_regex_highlighting = false,
     },
     indent = {
@@ -29,7 +30,7 @@ local conf = {
         },
         move = {
             enable = true,
-            set_jumps = true, 
+            set_jumps = true,
             -- goto_next_start = {
             --     ['xx'] = '@function.outer',
             --     ['xx'] = '@class.outer'
@@ -48,9 +49,6 @@ local conf = {
             -- },
         }
     },
-    playground = {
-        enable = true,
-    }
 }
 
 ts_config.setup(conf)
