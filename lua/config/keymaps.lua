@@ -12,7 +12,7 @@ keymap('n', '<C-l>', '<C-w><Right>', default_opts)
 keymap('n', '<C-s>', ':sp<CR>', default_opts)
 keymap('n', '<C-v>', ':vsp<CR>', default_opts)
 keymap('n', '<C-q>', ':q<CR>', default_opts) -- use this command to close a split, otherwise use <S-w> for tabs clossing
-keymap('n', '<C-b>', '<C-w><Down>:q<CR>', default_opts) -- close the horizontal bottom split
+keymap('n', '<C-b>', '<C-w><Down>:q<C-w><Right><CR>', default_opts) -- close the horizontal bottom split
 
 -- Buffers
 keymap('n', '<S-h>', ':bprevious<CR>', default_opts)
