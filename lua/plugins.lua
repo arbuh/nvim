@@ -208,6 +208,14 @@ local function plugins(use)
         end,
     }
 
+    -- Auto-save
+    use {
+        'rmagatti/auto-session',
+        config = function()
+            require("auto-session").setup()
+        end,
+    }
+
     -- Automatically set up configuration after cloning packer.nvim
     if packer_bootstrap then
         require('packer').sync()
