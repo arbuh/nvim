@@ -40,7 +40,7 @@ local mappings = {
         name = 'Git',
         b = { '<cmd>GitBlameToggle<cr>', 'Toggle blame' },
         o = { '<cmd>GitBlameOpenCommitURL<cr>', 'Open commit in a browser' },
-        m = { '<cmd>lua require(\'utils.git\').diff_with_main()<cr>', 'Diff with main' },
+        m = { '<cmd>lua require(\'utils.git_helpers\').diff_with_main()<cr>', 'Diff with main' },
         c = { '<cmd>DiffviewClose<cr>', 'Close diff' },
     },
 }
