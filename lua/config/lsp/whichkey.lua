@@ -27,7 +27,7 @@ local mappings = {
         o = { "<cmd>MetalsOrganizeImports<CR>", "Organize import" },
         S = { "<cmd>MetalsGenerateBspConfig<CR>", "Use a local build tool (e.g. sbt) as a build server" },
         i = { "<cmd>MetalsInfo<CR>", "Info" },
-        s = { "<cmd>lua require('telescope').extensions.metals.commands()<CR>", "Search for commands" },
+        c = { "<cmd>lua require('telescope').extensions.metals.commands()<CR>", "Search for commands" },
         l = { "<cmd>MetalsToggleLogs<CR>", "Logs" },
     },
 }
