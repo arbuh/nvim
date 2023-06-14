@@ -17,6 +17,9 @@ local conf = {
         update_cwd = true,
     },
     respect_buf_cwd = true,
+    filters = {
+        dotfiles = false,
+    },
 }
 
 nvimtree.setup(conf)
