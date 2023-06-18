@@ -47,3 +47,7 @@ vim.cmd([[
     autocmd BufRead,BufNewFile * :call IgnoreCamelCaseSpell()
 ]])
 
+-- Recommended session options for the auto-session plugin
+opt.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
+

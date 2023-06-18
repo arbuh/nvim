@@ -212,7 +212,7 @@ local function plugins(use)
     use {
         'rmagatti/auto-session',
         config = function()
-            require("auto-session").setup()
+            require("config.autosession")
         end,
     }
 

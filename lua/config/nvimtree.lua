@@ -5,7 +5,7 @@ local conf = {
     disable_netrw = true,
     hijack_netrw = true,
     view = {
-        number = true,
+        number = false,
         adaptive_size = true,
     },
     renderer = {
@@ -20,6 +20,10 @@ local conf = {
     filters = {
         dotfiles = false,
     },
+    git = {
+        enable = true,
+        ignore = false
+    }
 }
 
 nvimtree.setup(conf)
