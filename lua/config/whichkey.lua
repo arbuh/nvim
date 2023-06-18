@@ -19,9 +19,9 @@ local mappings = {
     ['R'] = { '<cmd>lua require(\'utils.runner\').run_code_considering_file_type()<cr>', 'Run script' },
     f = {
         name = 'Find',
-        f = { '<cmd>lua require(\'utils.finder\').find_files()<cr>', 'Files' },
+        f = { '<cmd>lua require(\'utils.search_helpers\').find_files()<cr>', 'Files' },
         o = { '<cmd>Telescope oldfiles<cr>', 'Old files' },
-        g = { '<cmd>Telescope live_grep<cr>', 'Using grep' },
+        g = { '<cmd>lua require(\'telescope.builtin\').live_grep()<cr>', 'Using grep' },
         b = { '<cmd>Telescope current_buffer_fuzzy_find<cr>', 'In the current buffer' },
         R = { '<cmd>lua require(\'spectre\').open_visual({select_word=true})<cr>', 'And replace everywhere' },
         r = { '<cmd>lua require(\'spectre\').open_file_search({select_word=true})<cr>', 'And replace' },
