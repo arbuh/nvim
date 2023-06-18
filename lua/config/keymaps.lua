@@ -18,10 +18,14 @@ keymap('n', '<C-b>', '<C-w><Down>:q<C-w><Right><CR>', default_opts) -- close the
 
 -- Buffers
 keymap('n', '<S-h>', ':bprevious<CR>', default_opts)
+keymap('n', '<S-j>', ':bprevious<CR>', default_opts) -- to align with the Vimium browser plugin shortcuts
 keymap('n', '<S-l>', ':bnext<CR>', default_opts)
+keymap('n', '<S-k>', ':bnext<CR>', default_opts) -- to align with the Vimium browser plugin shortcuts
 keymap('n', '<S-q>', ':bp<bar>sp<bar>bn<bar>bd<CR>', default_opts) -- this commands sequence prevents focus on Nvim tree after buffer delete
-keymap('n', '<S-s>', ':BufferLineCloseLeft<CR>', default_opts)
-keymap('n', '<S-d>', ':BufferLineCloseRight<CR>', default_opts)
+vim.keymap.set('n', '<S-d>', function()
+    vim.cmd('BufferLineCloseRight')
+    vim.cmd('BufferLineCloseLeft')
+end, default_opts)
 
 -- Search
 vim.keymap.set({'n', 'v'}, '<S-f>', function()
