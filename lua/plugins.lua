@@ -216,6 +216,14 @@ local function plugins(use)
         end,
     }
 
+    -- Highlight text under a cursor
+    use {
+        'tzachar/local-highlight.nvim',
+        config = function()
+            require('local-highlight').setup()
+        end
+    }
+
     -- Automatically set up configuration after cloning packer.nvim
     if packer_bootstrap then
         require('packer').sync()
