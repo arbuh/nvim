@@ -11,6 +11,7 @@ local language_servers = {
     "lua_ls",
     "pyright",
     "vimls",
+    "jdtls"
 }
 
 require("mason-lspconfig").setup {

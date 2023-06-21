@@ -13,10 +13,7 @@ local opts = {
 }
 
 local mappings = {
-    ['q'] = { '<cmd>qa<cr>', 'Close vim' },
-    ['e'] = { '<cmd>NvimTreeFocus<cr>', 'Focus to explorer' },
-    ['t'] = { '<cmd>NvimTreeToggle<cr>', 'Toggle explorer' },
-    ['R'] = { '<cmd>lua require(\'utils.runner\').run_code_considering_file_type()<cr>', 'Run script' },
+    ['e'] = { '<cmd>NvimTreeToggle<cr>', 'Toggle explorer' },
     f = {
         name = 'Find',
         f = { '<cmd>lua require(\'utils.search_helpers\').find_files()<cr>', 'Files' },
