@@ -221,7 +221,7 @@ local function plugins(use)
         'tzachar/local-highlight.nvim',
         config = function()
             require('local-highlight').setup()
-        end
+        end,
     }
 
     -- Automatically set up configuration after cloning packer.nvim

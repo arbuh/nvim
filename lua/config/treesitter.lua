@@ -9,7 +9,7 @@ local conf = {
     auto_install = true,
     highlight = {
         enable = true,
-        disable = { "lua", "python", "scala"}, -- Some languages with LSP setup are disabled here to hide useless warnings from treesitter for them
+        disable = {"lua", "python"}, -- Some languages with LSP setup are disabled here to hide useless warnings from treesitter for them
         additional_vim_regex_highlighting = false,
     },
     indent = {
