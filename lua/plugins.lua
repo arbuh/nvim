@@ -172,6 +172,12 @@ local function plugins(use)
             require("config.lsp")
         end,
     }
+    use {
+        'jose-elias-alvarez/null-ls.nvim',
+        config = function()
+            require("config.null_ls")
+        end,
+    }
 
     -- Code completion
     use {
