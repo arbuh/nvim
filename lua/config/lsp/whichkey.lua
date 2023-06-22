@@ -41,7 +41,19 @@ function CodeMappings()
     local file_type = vim.api.nvim_buf_get_option(buffer_nr, "filetype")
     local mappings = {}
 
-    if file_type == "scala" then
+    if file_type == "java" then
+        mappings = {
+            name = "Code",
+            o = { "<cmd>lua require'jdtls'.organize_imports()<cr>", "Organize Imports" },
+            t = { "<cmd>lua require('jdtls').test_class()<cr>", "Test Class" },
+            n = { "<cmd>lua require('jdtls').test_nearest_method()<cr>", "Test Nearest Method" },
+        }
+    elseif file_type == "python" then
+        mappings = {
+            name = "Code",
+            r = { "<cmd>update<CR><cmd>exec '!python3' shellescape(@%, 1)<cr>", "Run" },
+        }
+    elseif file_type == "scala" then
         mappings = {
             name = "Code",
             n = { "<cmd>MetalsNewScalaFile<CR>", "New Scala file" },
@@ -50,14 +62,9 @@ function CodeMappings()
             m = { "<cmd>lua require('telescope').extensions.metals.commands()<CR>", "Search for Metals commands" },
             l = { "<cmd>MetalsToggleLogs<CR>", "Toggle logs" },
         }
-    elseif file_type == "python" then
-        mappings = {
-            name = "Code",
-            r = { "<cmd>update<CR><cmd>exec '!python3' shellescape(@%, 1)<cr>", "Run" },
-        }
     end
 
-    whichkey.register({c = mappings}, normal_opts)
+    whichkey.register({ c = mappings }, normal_opts)
 end
 
 register_lsp_mappings()
