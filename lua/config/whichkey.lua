@@ -22,7 +22,7 @@ local mappings = {
         b = { '<cmd>Telescope current_buffer_fuzzy_find<cr>', 'In the current buffer' },
         R = { '<cmd>lua require(\'spectre\').open_visual({select_word=true})<cr>', 'And replace everywhere' },
         r = { '<cmd>lua require(\'spectre\').open_file_search({select_word=true})<cr>', 'And replace' },
-        C = { '<cmd>Telescope commands<cr>', 'Nvim commands' },
+        C = { '<cmd>lua require(\'telescope.builtin\').commands()<cr>', 'Nvim commands' },
     },
     p = {
         name = 'Packer',
