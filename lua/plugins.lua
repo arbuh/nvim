@@ -159,11 +159,12 @@ local function plugins(use)
         end,
     }
 
-    -- LSP, including Metals
+    -- LSP, including Metals and JDTLS
     use {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
         'scalameta/nvim-metals',
+        'mfussenegger/nvim-jdtls',
     }
     use {
         "neovim/nvim-lspconfig",
