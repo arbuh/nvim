@@ -17,7 +17,6 @@ vim.cmd('filetype plugin indent on') -- allow auto-indenting depending on file t
 opt.tabstop = 4                      -- number of columns occupied by a tab
 opt.shiftwidth = 4                   -- width for autoindents
 opt.expandtab = true                 -- converts tabs to white space
-opt.shiftwidth = 4                   -- width for autoindents
 vim.cmd('syntax on')                 -- syntax highlighting
 
 -- Leader
