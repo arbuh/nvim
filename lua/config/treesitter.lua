@@ -5,11 +5,11 @@ local ts_config = require('nvim-treesitter.configs')
 
 local conf = {
     ensure_installed = "all",
-    sync_install = false,
+    sync_install = true,
     auto_install = true,
     highlight = {
         enable = true,
-        disable = {"lua", "python"}, -- Some languages with LSP setup are disabled here to hide useless warnings from treesitter for them
+        disable = {"lua"}, -- Some languages with LSP setup are disabled here to hide useless warnings from treesitter for them
         additional_vim_regex_highlighting = false,
     },
     indent = {
