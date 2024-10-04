@@ -20,6 +20,7 @@ end
 local packer_bootstrap = ensure_packer()
 
 local function plugins(use)
+    -- Prerequisites
     use 'wbthomason/packer.nvim'
 
     use {
@@ -31,6 +32,8 @@ local function plugins(use)
             require("config.treesitter")
         end,
     }
+
+    use "nvim-neotest/nvim-nio"
 
     -- Color schema
     use {

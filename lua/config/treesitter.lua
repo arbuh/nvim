@@ -5,7 +5,7 @@ local ts_config = require('nvim-treesitter.configs')
 
 local conf = {
     ensure_installed = "all",
-    sync_install = true,
+    sync_install = false,
     auto_install = true,
     highlight = {
         enable = true,
