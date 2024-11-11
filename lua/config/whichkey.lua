@@ -1,12 +1,12 @@
 local whichkey = require('which-key')
 
-local opts = {
-    mode = 'n',
-    prefix = '<leader>',
-}
+whichkey.add({
+    { "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Toggle explorer", mode = "n" },
+    { "<leader>l", "<cmd>Lazy<cr>", desc = "Lazy", mode = "n" },
+})
+--[[
 
 local mappings = {
-    ['e'] = { '<cmd>NvimTreeToggle<cr>', 'Toggle explorer' },
     f = {
         name = 'Find',
         f = { '<cmd>lua require(\'utils.search_helpers\').find_files()<cr>', 'Files' },
@@ -35,5 +35,6 @@ local mappings = {
     },
 }
 
-whichkey.register(mappings, opts)
+whichkey.add(mappings)
+]]
 

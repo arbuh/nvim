@@ -1,6 +1,9 @@
-local lualine = require('lualine')
-
-local conf = {
+return {
+  'nvim-lualine/lualine.nvim',
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+  },
+  opts = {
     options = {
         theme = 'sonokai',
     },
@@ -11,7 +14,5 @@ local conf = {
             },
         },
     },
+  },
 }
-
-lualine.setup(conf)
-

@@ -1,7 +1,9 @@
 local keymap = vim.api.nvim_set_keymap
 local default_opts = { noremap = true, silent = true }
 
+--[[
 local search_helpers = require 'utils.search_helpers'
+]]
 
 -- Save
 keymap('n', '<S-w>', ':w<CR>', default_opts)
@@ -25,11 +27,13 @@ keymap('n', '<S-q>', ':bp<bar>sp<bar>bn<bar>bd<CR>', default_opts) -- this comma
 vim.keymap.set('n', '<S-d>', function()
     vim.cmd('BufferLineCloseRight')
     vim.cmd('BufferLineCloseLeft')
-end, default_opts)
+end, default_opts) -- close all tabs except the current one
 
 -- Search
+--[[
 vim.keymap.set({'n', 'v'}, '<S-f>', function()
 	local text = search_helpers.get_visual_selection()
 	require('telescope.builtin').live_grep({ default_text = text })
 end, default_opts)
+]]
 

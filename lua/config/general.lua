@@ -21,6 +21,7 @@ vim.cmd('syntax on')                 -- syntax highlighting
 
 -- Leader
 g.mapleader = ';'
+g.maplocalleader = "\\"
 
 -- Search
 opt.ignorecase = true -- case insensitive
@@ -49,4 +50,6 @@ vim.cmd([[
 -- Recommended session options for the auto-session plugin
 opt.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
-
+-- Disabling of netrw to prevent it interfering with nvim-tree
+g.loaded_netrw       = 1
+g.loaded_netrwPlugin = 1
