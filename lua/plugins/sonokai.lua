@@ -1,3 +1,4 @@
+-- Color scheme
 return {
       'sainnhe/sonokai',
       lazy = false,

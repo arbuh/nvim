@@ -1,3 +1,4 @@
+-- File tree browser
 return {
   "nvim-tree/nvim-tree.lua",
   lazy = false,

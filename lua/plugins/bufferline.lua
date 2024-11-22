@@ -1,3 +1,4 @@
+-- Tabs management
 return {
   "akinsho/bufferline.nvim",
   lazy = false,
