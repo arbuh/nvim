@@ -20,9 +20,6 @@ end
 local packer_bootstrap = ensure_packer()
 
 local function plugins(use)
-    -- Prerequisites
-    use 'wbthomason/packer.nvim'
-
     use {
         'nvim-treesitter/nvim-treesitter',
         requires = {
@@ -30,75 +27,6 @@ local function plugins(use)
         },
         config = function()
             require("config.treesitter")
-        end,
-    }
-
-    use "nvim-neotest/nvim-nio"
-
-    -- Color schema
-    use {
-        'sainnhe/sonokai',
-        config = function()
-            -- Enable the 24-bit true color, if it is supported by the terminal emulator
-            vim.api.nvim_exec([[
-                if has('termguicolors')
-                    set termguicolors
-                endif
-            ]], false)
-            vim.g.sonokai_style = 'maia'
-            vim.g.sonokai_better_performance = 1
-            vim.cmd('colorscheme sonokai')
-        end,
-    }
-
-     -- Icons (required by some plugins)
-    use {
-        'kyazdani42/nvim-web-devicons',
-        config = function()
-            require('nvim-web-devicons').setup { default = true }
-        end,
-    }
-
-    -- Helper libraries (required by some plugins)
-    use 'nvim-lua/plenary.nvim'
-
-    -- Status line
-    use {
-        'nvim-lualine/lualine.nvim',
-        config = function()
-            require("config.lualine")
-        end,
-    }
-
-    -- Startup screen
-    use {
-        'goolord/alpha-nvim',
-        config = function ()
-            require'alpha'.setup(require'alpha.themes.startify'.config)
-        end
-    }
-
-    -- File explorer
-    use {
-        'kyazdani42/nvim-tree.lua',
-        config = function()
-            require("config.nvimtree")
-        end,
-    }
-
-    -- Key mappings
-    use {
-        'folke/which-key.nvim',
-        config = function()
-            require('config.whichkey')
-        end,
-    }
-
-    -- Buffers management
-    use {
-        'akinsho/nvim-bufferline.lua',
-        config = function()
-            require('config.bufferline')
         end,
     }
 
