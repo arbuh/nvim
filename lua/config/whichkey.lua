@@ -1,9 +1,27 @@
 local whichkey = require('which-key')
 
+-- General
 whichkey.add({
     { "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Toggle explorer", mode = "n" },
     { "<leader>l", "<cmd>Lazy<cr>", desc = "Lazy", mode = "n" },
 })
+
+-- Search
+local builtin = require('telescope.builtin')
+whichkey.add({
+    { "<leader>s", group = "Search" },
+    { "<leader>sf", builtin.find_files, desc = "Search for files", mode = "n" },
+    { "<leader>ss", builtin.grep_string, desc = "Search for current selection/cursor", mode = "n" },
+    { "<leader>sg", builtin.live_grep, desc = "Live grep", mode = "n" },
+    { "<leader>so", builtin.oldfiles, desc = "Search for previously opened files", mode = "n" },
+})
+
+-- Git
+whichkey.add({
+    { "<leader>g", group = "Git" },
+    { "<leader>gb", "<cmd>BlameToggle<cr>", desc = "Git blame", mode = "n" },
+})
+
 --[[
 
 local mappings = {

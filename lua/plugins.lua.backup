@@ -20,52 +20,6 @@ end
 local packer_bootstrap = ensure_packer()
 
 local function plugins(use)
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        requires = {
-            'nvim-treesitter/nvim-treesitter-textobjects',
-        },
-        config = function()
-            require("config.treesitter")
-        end,
-    }
-
-    -- Telescope (Advanced UI for fuzzy search)
-    use {
-        'nvim-telescope/telescope.nvim',
-        opt = true,
-        cmd = "Telescope",
-        module = 'telescope',
-        config = function()
-            require('config.telescope')
-        end,
-        wants = {
-            'popup.nvim',
-            'telescope-fzf-native.nvim',
-            'telescope-project.nvim',
-            'telescope-repo.nvim',
-             'project.nvim',
-         },
-         requires = {
-            'nvim-lua/popup.nvim',
-            { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
-            'nvim-telescope/telescope-project.nvim',
-            'cljoly/telescope-repo.nvim',
-            'ahmedkhalf/project.nvim',
-        },
-    }
-
-    -- Automatic change of the working directory on a file open
-    use 'airblade/vim-rooter'
-
-    -- Git blame
-    use {
-        'f-person/git-blame.nvim',
-        config = function()
-            vim.g.gitblame_enabled = 0
-            vim.g.gitblame_date_format = '%d-%m-%y %H:%M'
-        end,
-    }
 
     -- Git diff
     use 'sindrets/diffview.nvim'
@@ -124,9 +78,6 @@ local function plugins(use)
         end,
     }
 
-    -- Comment lines considering file type
-    use 'tpope/vim-commentary'
-
     -- Find and replace
     use 'windwp/nvim-spectre'
 
@@ -135,22 +86,6 @@ local function plugins(use)
         'm4xshen/autoclose.nvim',
         config = function()
             require("autoclose").setup()
-        end,
-    }
-
-    -- Auto-save
-    use {
-        'Pocco81/auto-save.nvim',
-        config = function()
-            require("config.autosave")
-        end,
-    }
-
-    -- Auto-save
-    use {
-        'rmagatti/auto-session',
-        config = function()
-            require("config.autosession")
         end,
     }
 
