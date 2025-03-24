@@ -1,4 +1,5 @@
 local whichkey = require('which-key')
+local git_helpers = require('utils.git_helpers')
 
 -- General
 whichkey.add({
@@ -19,7 +20,9 @@ whichkey.add({
 -- Git
 whichkey.add({
     { "<leader>g", group = "Git" },
-    { "<leader>gb", "<cmd>BlameToggle<cr>", desc = "Git blame", mode = "n" },
+    { "<leader>gdl", "<cmd>DiffviewOpen<cr>", desc = "Diff with local", mode = "n" },
+    { "<leader>gdo", function() git_helpers.diff_with_main() end, desc = "Diff with origin", mode = "n" },
+    { "<leader>gdc", "<cmd>DiffviewClose<cr>", desc = "Close diff", mode = "n" },
 })
 
 --[[
