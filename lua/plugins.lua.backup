@@ -21,9 +21,6 @@ local packer_bootstrap = ensure_packer()
 
 local function plugins(use)
 
-    -- Git diff
-    use 'sindrets/diffview.nvim'
-
     -- Git highlight changes
     use {
         'airblade/vim-gitgutter',
