@@ -1,3 +1,4 @@
+-- "Classic" Git blame that shows an author for all the lines
 return {
   {
     "FabijanZulj/blame.nvim",
