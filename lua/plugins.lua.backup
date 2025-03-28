@@ -67,9 +67,6 @@ local function plugins(use)
         end,
     }
 
-    -- Find and replace
-    use 'windwp/nvim-spectre'
-
     -- Auto-close for brackets and quotes
     use {
         'm4xshen/autoclose.nvim',
