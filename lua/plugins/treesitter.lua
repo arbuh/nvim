@@ -10,7 +10,7 @@ return {
 
       configs.setup({
           auto_install = true,
-          ensure_installed = { "java", "lua", "python", "scala", "vim", "vimdoc" },
+          ensure_installed = { "java", "lua", "markdown", "python", "scala", "vim", "vimdoc" },
           sync_install = false,
           highlight = {
             enable = true,

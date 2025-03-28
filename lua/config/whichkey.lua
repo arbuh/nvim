@@ -15,6 +15,7 @@ whichkey.add({
     { "<leader>ss", builtin.grep_string, desc = "Search for current selection/cursor", mode = "n" },
     { "<leader>sg", builtin.live_grep, desc = "Live grep", mode = "n" },
     { "<leader>so", builtin.oldfiles, desc = "Search for previously opened files", mode = "n" },
+    { "<leader>sr", "<cmd>GrugFar<cr>", desc = "Search and replace", mode = "n" },
 })
 
 -- Git

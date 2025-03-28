@@ -30,10 +30,7 @@ vim.keymap.set('n', '<S-d>', function()
 end, default_opts) -- close all tabs except the current one
 
 -- Search
---[[
-vim.keymap.set({'n', 'v'}, '<S-f>', function()
-	local text = search_helpers.get_visual_selection()
-	require('telescope.builtin').live_grep({ default_text = text })
+vim.keymap.set('v', '<S-f>', function()
+    require('grug-far').open({ prefills = { search = vim.fn.expand("<cword>") } })
 end, default_opts)
-]]
 
