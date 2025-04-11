@@ -5,6 +5,7 @@ local git_helpers = require('utils.git_helpers')
 whichkey.add({
     { "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Toggle explorer", mode = "n" },
     { "<leader>l", "<cmd>Lazy<cr>", desc = "Lazy", mode = "n" },
+    { "<leader>m", "<cmd>Mason<cr>", desc = "Mason", mode = "n" },
 })
 
 -- Search
