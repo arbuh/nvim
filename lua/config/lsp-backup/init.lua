@@ -31,6 +31,7 @@ local function setup_language_server(name)
         on_attach = on_attach,
         capabilities = capabilities,
     })
+    lsp
 end
 
 for _, ls_name in ipairs(language_servers) do
