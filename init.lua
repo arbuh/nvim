@@ -4,5 +4,5 @@ require("config.lazy")
 
 require("config.whichkey")
 require("config.lsp")
-require("config.cmp")
+Require("config.cmp")
 

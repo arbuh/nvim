@@ -28,6 +28,8 @@ vim.keymap.set('n', '<S-d>', function()
     vim.cmd('BufferLineCloseRight')
     vim.cmd('BufferLineCloseLeft')
 end, default_opts) -- close all tabs except the current one
+ -- Intellij like switch between the last buffers, but we use Ctrl instead of Shift because the most terminal emulators do not recognize Ctrl + Tab
+keymap('n', '<S-Tab>', ':b#<CR>', default_opts)
 
 -- Search
 vim.keymap.set('v', '<S-f>', function()
