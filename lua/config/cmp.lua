@@ -40,12 +40,11 @@ mapping = require('cmp').mapping.preset.insert({
   }),
 })
 
-
 -- Setup for the command line search mode
     cmp.setup.cmdline('/', {
       mapping = cmp.mapping.preset.cmdline(),
       sources = {
-        { name = 'buffer' }
+        { name = 'buffer' },
       }
     })
 
@@ -53,7 +52,8 @@ mapping = require('cmp').mapping.preset.insert({
     cmp.setup.cmdline(':', {
       mapping = cmp.mapping.preset.cmdline(),
       sources = cmp.config.sources({
-        { name = 'path' }
+        { name = 'path' },
+        { name = 'cmdline' },
       })
     })
 

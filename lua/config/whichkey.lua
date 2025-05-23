@@ -6,6 +6,7 @@ whichkey.add({
     { "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Toggle explorer", mode = "n" },
     { "<leader>l", "<cmd>Lazy<cr>", desc = "Lazy", mode = "n" },
     { "<leader>m", "<cmd>Mason<cr>", desc = "Mason", mode = "n" },
+    { "<leader>z", function() Snacks.zen.zen() end, desc = "Zen", mode = "n" },
 })
 
 -- Search
@@ -23,6 +24,8 @@ whichkey.add({
 whichkey.add({
     { "<leader>g", group = "Git" },
     { "<leader>gb", "<cmd>BlameToggle<cr>", desc = "Toggle Git blame", mode = "n" },
+    { "<leader>gl", function() Snacks.git.blame_line() end, desc = "Show history for the line", mode = "n" },
+    { "<leader>go", function() Snacks.gitbrowse() end, desc = "Open the repo of the file in the browser", mode = "n" },
     { "<leader>gdl", "<cmd>DiffviewOpen<cr>", desc = "Diff with local", mode = "n" },
     { "<leader>gdo", function() git_helpers.diff_with_main() end, desc = "Diff with origin", mode = "n" },
     { "<leader>gdc", "<cmd>DiffviewClose<cr>", desc = "Close diff", mode = "n" },
