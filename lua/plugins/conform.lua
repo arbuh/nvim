@@ -1,4 +1,4 @@
 -- Code formatting
 return {
-    'stevearc/conform.nvim'
+	"stevearc/conform.nvim",
 }
