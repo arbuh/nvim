@@ -31,6 +31,29 @@ whichkey.add({
     { "<leader>gdc", "<cmd>DiffviewClose<cr>", desc = "Close diff", mode = "n" },
 })
 
+-- LSP
+whichkey.add({
+    { "<leader>c", group = "Code" },
+    { "<leader>cf", function() require("conform").format() end, desc = "Formatting", mode = "n" },
+})
+    -- local mappings = {
+    --     ['d'] = { "<Cmd>lua vim.lsp.buf.definition()<CR>", "Go to definition" },
+    --     ['a'] = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Code actions" },
+    --     ['r'] = { "<cmd>lua vim.lsp.buf.references()<CR>", "References" },
+    --     l = {
+    --         name = "LSP",
+    --         h = { "<Cmd>lua vim.lsp.buf.hover()<CR>", "Hover" },
+    --         -- r = { "<cmd>lua vim.lsp.buf.references()<CR>", "References" },
+    --         r = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename" },
+    --         -- c = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Code actions" },
+    --         -- d = { "<Cmd>lua vim.lsp.buf.definition()<CR>", "Go to definition" },
+    --         s = { "<cmd>lua vim.lsp.buf.signature_help()<CR>", "Signature help" },
+    --         F = { "<cmd>lua vim.lsp.buf.format({ async = true })<CR>", "Formatting" },
+    --         f = { '<cmd>Telescope lsp_dynamic_workspace_symbols<cr>', 'LSP symbols' },
+    --         d = { "<cmd>lua vim.diagnostic.setqflist()<CR>", "Diagnostics" },
+    --     },
+    -- }
+
 --[[
 
 local mappings = {
