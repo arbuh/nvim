@@ -17,6 +17,7 @@ whichkey.add({
     { "<leader>ss", builtin.grep_string, desc = "Search for current selection/cursor", mode = "n" },
     { "<leader>sg", builtin.live_grep, desc = "Live grep", mode = "n" },
     { "<leader>so", builtin.oldfiles, desc = "Search for previously opened files", mode = "n" },
+    { "<leader>sl", builtin.lsp_dynamic_workspace_symbols, desc = "LSP symbols", mode = "n" },
     { "<leader>sr", "<cmd>GrugFar<cr>", desc = "Search and replace", mode = "n" },
 })
 
@@ -33,58 +34,14 @@ whichkey.add({
 
 -- LSP
 whichkey.add({
+    { "<leader>a", "<cmd>lua vim.lsp.buf.code_action()<cr>", desc = "Code actions", mode = "n" },
+    { "<leader>d", "<cmd>lua vim.lsp.buf.definition()<cr>", desc = "Go to definition", mode = "n" },
+    { "<leader>r", "<cmd>lua vim.lsp.buf.references()<cr>", desc = "References", mode = "n" },
     { "<leader>c", group = "Code" },
     { "<leader>cf", function() require("conform").format() end, desc = "Formatting", mode = "n" },
+    { "<leader>ch", "<cmd>lua vim.lsp.buf.hover()<cr>", desc = "Hover", mode = "n" },
+    { "<leader>cr", "<cmd>lua vim.lsp.buf.rename()<cr>", desc = "Rename", mode = "n" },
+    { "<leader>cs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", desc = "Signature help", mode = "n" },
+    { "<leader>cd", "<cmd>lua vim.diagnostic.setqflist()<cr>", desc = "LSP diagnostics", mode = "n" },
 })
-    -- local mappings = {
-    --     ['d'] = { "<Cmd>lua vim.lsp.buf.definition()<CR>", "Go to definition" },
-    --     ['a'] = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Code actions" },
-    --     ['r'] = { "<cmd>lua vim.lsp.buf.references()<CR>", "References" },
-    --     l = {
-    --         name = "LSP",
-    --         h = { "<Cmd>lua vim.lsp.buf.hover()<CR>", "Hover" },
-    --         -- r = { "<cmd>lua vim.lsp.buf.references()<CR>", "References" },
-    --         r = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename" },
-    --         -- c = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Code actions" },
-    --         -- d = { "<Cmd>lua vim.lsp.buf.definition()<CR>", "Go to definition" },
-    --         s = { "<cmd>lua vim.lsp.buf.signature_help()<CR>", "Signature help" },
-    --         F = { "<cmd>lua vim.lsp.buf.format({ async = true })<CR>", "Formatting" },
-    --         f = { '<cmd>Telescope lsp_dynamic_workspace_symbols<cr>', 'LSP symbols' },
-    --         d = { "<cmd>lua vim.diagnostic.setqflist()<CR>", "Diagnostics" },
-    --     },
-    -- }
-
---[[
-
-local mappings = {
-    f = {
-        name = 'Find',
-        f = { '<cmd>lua require(\'utils.search_helpers\').find_files()<cr>', 'Files' },
-        o = { '<cmd>Telescope oldfiles<cr>', 'Old files' },
-        g = { '<cmd>lua require(\'telescope.builtin\').live_grep()<cr>', 'Using grep' },
-        b = { '<cmd>Telescope current_buffer_fuzzy_find<cr>', 'In the current buffer' },
-        R = { '<cmd>lua require(\'spectre\').open_visual({select_word=true})<cr>', 'And replace everywhere' },
-        r = { '<cmd>lua require(\'spectre\').open_file_search({select_word=true})<cr>', 'And replace' },
-        C = { '<cmd>lua require(\'telescope.builtin\').commands()<cr>', 'Nvim commands' },
-    },
-    p = {
-        name = 'Packer',
-        c = { '<cmd>PackerCompile<cr>', 'Compile' },
-        d = { '<cmd>PackerClean<cr>', 'Clean' },
-        i = { '<cmd>PackerInstall<cr>', 'Install' },
-        s = { '<cmd>PackerSync<cr>', 'Sync' },
-        S = { '<cmd>PackerStatus<cr>', 'Status' },
-        u = { '<cmd>PackerUpdate<cr>', 'Update' },
-    },
-    g = {
-        name = 'Git',
-        b = { '<cmd>GitBlameToggle<cr>', 'Toggle blame' },
-        o = { '<cmd>GitBlameOpenCommitURL<cr>', 'Open commit in a browser' },
-        m = { '<cmd>lua require(\'utils.git_helpers\').diff_with_main()<cr>', 'Diff with main' },
-        c = { '<cmd>DiffviewClose<cr>', 'Close diff' },
-    },
-}
-
-whichkey.add(mappings)
-]]
 
