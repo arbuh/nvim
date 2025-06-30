@@ -1,9 +1,21 @@
-require("conform").setup({
+conform = require("conform")
+mason_installer = require("mason-tool-installer")
+
+conform.setup({
 	formatters_by_ft = {
-		-- If formatting does not work, make sure you have the following formatters installed!
+		-- Make sure you have the formatters installed below via mason-tool-installer!
 		java = { "google-java-format" },
 		json = { "jq" },
 		lua = { "stylua" },
-		markdown = { "markdownfmt " },
 	},
+})
+
+mason_installer.setup({
+	ensure_installed = {
+		"stylua",
+		"google-java-format",
+		"jq",
+	},
+	auto_update = true,
+	run_on_start = true,
 })

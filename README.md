@@ -7,6 +7,5 @@
 3. Configure the font in the terminal emulator
 4. Install [ripgrep](https://github.com/BurntSushi/ripgrep); we need it for `:Telescope live_grep` and `grug-far.nvim`
 5. Install [cs](https://get-coursier.io/); we need it for Metals
-6. Install the formatters set up using the conform plugin
-7. Clone the repository to `~/.config` and run `nvim`
+6. Clone the repository to `~/.config` and run `nvim`
 
