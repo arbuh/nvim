@@ -5,7 +5,6 @@ require("mason").setup()
 mason_lspconfig = require("mason-lspconfig")
 
 mason_lspconfig.setup({
-	ensure_installed = { "lua_ls" },
+	ensure_installed = { "gopls", "jdtls", "lua_ls", "pyright" },
 	automatic_enable = true,
 })
-
