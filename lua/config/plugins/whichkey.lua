@@ -34,14 +34,15 @@ whichkey.add({
 
 -- LSP
 whichkey.add({
+    { "<leader>d", "<cmd>lua vim.diagnostic.open_float()<cr>", desc = "Open diagnostics", mode = "n" },
     { "<leader>a", "<cmd>lua vim.lsp.buf.code_action()<cr>", desc = "Code actions", mode = "n" },
-    { "<leader>d", "<cmd>lua vim.lsp.buf.definition()<cr>", desc = "Go to definition", mode = "n" },
     { "<leader>r", "<cmd>lua vim.lsp.buf.references()<cr>", desc = "References", mode = "n" },
     { "<leader>c", group = "Code" },
     { "<leader>cf", function() require("conform").format() end, desc = "Formatting", mode = "n" },
     { "<leader>ch", "<cmd>lua vim.lsp.buf.hover()<cr>", desc = "Hover", mode = "n" },
     { "<leader>cr", "<cmd>lua vim.lsp.buf.rename()<cr>", desc = "Rename", mode = "n" },
     { "<leader>cs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", desc = "Signature help", mode = "n" },
-    { "<leader>cd", "<cmd>lua vim.diagnostic.setqflist()<cr>", desc = "LSP diagnostics", mode = "n" },
+    { "<leader>cd", "<cmd>lua vim.lsp.buf.definition()<cr>", desc = "Go to definition", mode = "n" },
+    { "<leader>cD", "<cmd>lua vim.diagnostic.setqflist()<cr>", desc = "LSP diagnostics", mode = "n" },
 })
 
