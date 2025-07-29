@@ -38,3 +38,8 @@ keymap("n", "<S-Tab>", ":b#<CR>", default_opts)
 vim.keymap.set("v", "<S-f>", function()
 	require("grug-far").open({ prefills = { search = vim.fn.expand("<cword>") } })
 end, default_opts)
+
+-- Terminal
+vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], default_opts)
+vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]], default_opts)
+

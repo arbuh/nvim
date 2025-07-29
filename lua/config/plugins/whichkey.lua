@@ -7,18 +7,20 @@ whichkey.add({
     { "<leader>l", "<cmd>Lazy<cr>", desc = "Lazy", mode = "n" },
     { "<leader>m", "<cmd>Mason<cr>", desc = "Mason", mode = "n" },
     { "<leader>z", function() Snacks.zen.zen() end, desc = "Zen", mode = "n" },
+    { "<leader>t", "<cmd>ToggleTerm size=20<cr>", desc = "Toggle terminal", mode = "n" },
+    { "<leader>t", "<cmd>ToggleTerm size=20<cr>", desc = "Toggle terminal", mode = "t" },
 })
 
 -- Search
 local builtin = require('telescope.builtin')
 whichkey.add({
-    { "<leader>s", group = "Search" },
-    { "<leader>sf", builtin.find_files, desc = "Search for files", mode = "n" },
-    { "<leader>ss", builtin.grep_string, desc = "Search for current selection/cursor", mode = "n" },
-    { "<leader>sg", builtin.live_grep, desc = "Live grep", mode = "n" },
-    { "<leader>so", builtin.oldfiles, desc = "Search for previously opened files", mode = "n" },
-    { "<leader>sl", builtin.lsp_dynamic_workspace_symbols, desc = "LSP symbols", mode = "n" },
-    { "<leader>sr", "<cmd>GrugFar<cr>", desc = "Search and replace", mode = "n" },
+    { "<leader>f", group = "Search" },
+    { "<leader>ff", builtin.find_files, desc = "Search for files", mode = "n" },
+    { "<leader>fs", builtin.grep_string, desc = "Search for current selection/cursor", mode = "n" },
+    { "<leader>fg", builtin.live_grep, desc = "Live grep", mode = "n" },
+    { "<leader>fo", builtin.oldfiles, desc = "Search for previously opened files", mode = "n" },
+    { "<leader>fl", builtin.lsp_dynamic_workspace_symbols, desc = "LSP symbols", mode = "n" },
+    { "<leader>fr", "<cmd>GrugFar<cr>", desc = "Search and replace", mode = "n" },
 })
 
 -- Git
