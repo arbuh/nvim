@@ -15,7 +15,7 @@ keymap("n", "<C-k>", "<C-w><Up>", default_opts)
 keymap("n", "<C-l>", "<C-w><Right>", default_opts)
 keymap("n", "<C-s>", ":sp<CR>", default_opts)
 keymap("n", "<C-v>", ":vsp<CR>", default_opts)
-keymap("n", "<C-q>", ":q<CR>", default_opts) -- use this command to close a split, otherwise use <S-q> for tabs closing
+keymap("n", "<C-w>", ":q<CR>", default_opts) -- use this command to close a split, otherwise use <S-q> for tabs closing
 keymap("n", "<C-b>", "<C-w><Down>:q<C-w><Right><CR>", default_opts) -- close the horizontal bottom split
 
 -- Buffers
@@ -24,7 +24,7 @@ keymap("n", "<S-j>", ":bprevious<CR>", default_opts) -- to align with the Vimium
 keymap("n", "<S-l>", ":bnext<CR>", default_opts)
 keymap("n", "<S-k>", ":bnext<CR>", default_opts) -- to align with the Vimium browser plugin shortcuts
 -- Close the current tab
-vim.keymap.set("n", "<S-q>", function()
+vim.keymap.set("n", "<S-w>", function()
 	Snacks.bufdelete()
 end, default_opts)
 -- Close all tabs except the current one
