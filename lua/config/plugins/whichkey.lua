@@ -1,14 +1,18 @@
 local whichkey = require('which-key')
 local git_helpers = require('utils.git_helpers')
 
--- General
+-- Special bars
 whichkey.add({
-    { "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Toggle explorer", mode = "n" },
-    { "<leader>l", "<cmd>Lazy<cr>", desc = "Lazy", mode = "n" },
-    { "<leader>m", "<cmd>Mason<cr>", desc = "Mason", mode = "n" },
-    { "<leader>z", function() Snacks.zen.zen() end, desc = "Zen", mode = "n" },
+    { "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Toggle file tree (explorer)", mode = "n" },
     { "<leader>t", "<cmd>ToggleTerm size=20<cr>", desc = "Toggle terminal", mode = "n" },
-    { "<leader>t", "<cmd>ToggleTerm size=20<cr>", desc = "Toggle terminal", mode = "t" },
+    { "<leader>t", "<cmd>ToggleTerm size=20<cr>", desc = "Toggle terminal", mode = "t" }, -- For terminal mode
+})
+
+-- Plugin management
+whichkey.add({
+    { "<leader>p", group = "Plugins" },
+    { "<leader>pl", "<cmd>Lazy<cr>", desc = "Open Lazy dashboard", mode = "n" },
+    { "<leader>pm", "<cmd>Mason<cr>", desc = "Open Mason dashboard", mode = "n" },
 })
 
 -- Search
@@ -16,10 +20,11 @@ local builtin = require('telescope.builtin')
 whichkey.add({
     { "<leader>f", group = "Search" },
     { "<leader>ff", builtin.find_files, desc = "Search for files", mode = "n" },
-    { "<leader>fs", builtin.grep_string, desc = "Search for current selection/cursor", mode = "n" },
+    { "<leader>fb", builtin.buffers, desc = "List current buffers", mode = "n" },
+    { "<leader>b", builtin.grep_string, desc = "Search for current selection/cursor", mode = "n" },
     { "<leader>fg", builtin.live_grep, desc = "Live grep", mode = "n" },
     { "<leader>fo", builtin.oldfiles, desc = "Search for previously opened files", mode = "n" },
-    { "<leader>fl", builtin.lsp_dynamic_workspace_symbols, desc = "LSP symbols", mode = "n" },
+    { "<leader>fl", builtin.lsp_dynamic_workspace_symbols, desc = "Search for LSP symbols", mode = "n" },
     { "<leader>fr", "<cmd>GrugFar<cr>", desc = "Search and replace", mode = "n" },
 })
 
@@ -38,13 +43,13 @@ whichkey.add({
 whichkey.add({
     { "<leader>d", "<cmd>lua vim.diagnostic.open_float()<cr>", desc = "Open diagnostics", mode = "n" },
     { "<leader>a", "<cmd>lua vim.lsp.buf.code_action()<cr>", desc = "Code actions", mode = "n" },
-    { "<leader>r", "<cmd>lua vim.lsp.buf.references()<cr>", desc = "References", mode = "n" },
+    { "<leader>h", "<cmd>lua vim.lsp.buf.hover()<cr>", desc = "Hover", mode = "n" },
     { "<leader>c", group = "Code" },
-    { "<leader>cf", function() require("conform").format() end, desc = "Formatting", mode = "n" },
-    { "<leader>ch", "<cmd>lua vim.lsp.buf.hover()<cr>", desc = "Hover", mode = "n" },
-    { "<leader>cr", "<cmd>lua vim.lsp.buf.rename()<cr>", desc = "Rename", mode = "n" },
-    { "<leader>cs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", desc = "Signature help", mode = "n" },
+    { "<leader>cf", function() require("conform").format() end, desc = "Format code", mode = "n" },
+    { "<leader>cR", "<cmd>lua vim.lsp.buf.rename()<cr>", desc = "Rename", mode = "n" },
+    { "<leader>cr", "<cmd>lua vim.lsp.buf.references()<cr>", desc = "List references", mode = "n" },
+    { "<leader>cs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", desc = "Shot signature help", mode = "n" },
     { "<leader>cd", "<cmd>lua vim.lsp.buf.definition()<cr>", desc = "Go to definition", mode = "n" },
-    { "<leader>cD", "<cmd>lua vim.diagnostic.setqflist()<cr>", desc = "LSP diagnostics", mode = "n" },
+    { "<leader>cD", "<cmd>lua vim.diagnostic.setqflist()<cr>", desc = "List diagnostic messages", mode = "n" },
 })
 
