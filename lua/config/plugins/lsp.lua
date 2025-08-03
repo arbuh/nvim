@@ -12,6 +12,7 @@ mason_lspconfig.setup({
 -- Language specific config
 -- Find all the available configs here: https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 local servers = {
+    -- https://tip.golang.org/gopls/settings
 	gopls = {
 		settings = {
 			gopls = {
@@ -23,12 +24,13 @@ local servers = {
 			},
 		},
 	},
+    -- https://microsoft.github.io/pyright/#/configuration
 	pyright = {
 		settings = {
 			python = {
 				analysis = {
 					typeCheckingMode = "basic",
-					semanticHighlighting = true,
+					useLibraryCodeForTypes = true,
 				},
 			},
 		},
