@@ -11,5 +11,8 @@ return {
 			enable = true,
 			update_root = false,
 		},
+        filters = {
+            git_ignored = false,
+        }
 	},
 }
