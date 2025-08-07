@@ -5,6 +5,7 @@ return {
 		"nvim-tree/nvim-web-devicons",
 	},
 	opts = {
+		theme = "sonokai",
 		sections = {
 			lualine_c = {
 				{ "filename", path = 1 },
