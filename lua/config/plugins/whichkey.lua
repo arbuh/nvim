@@ -51,5 +51,6 @@ whichkey.add({
     { "<leader>cs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", desc = "Shot signature help", mode = "n" },
     { "<leader>cd", "<cmd>lua vim.lsp.buf.definition()<cr>", desc = "Go to definition", mode = "n" },
     { "<leader>cD", "<cmd>lua vim.diagnostic.setqflist()<cr>", desc = "List diagnostic messages", mode = "n" },
+    { "<leader>cs", "<cmd>LspRestart<cr>", desc = "Restart LSP server", mode = "n" },
 })
 
