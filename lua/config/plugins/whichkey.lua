@@ -54,3 +54,5 @@ whichkey.add({
     { "<leader>cs", "<cmd>LspRestart<cr>", desc = "Restart LSP server", mode = "n" },
 })
 
+-- We disable gitgutter key maps, otherwise they hijack the 'h' letter mappings
+vim.g.gitgutter_map_keys = 0
