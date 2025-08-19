@@ -1,7 +1,7 @@
 -- Syntax tree
 return {
 	"nvim-treesitter/nvim-treesitter",
-	lazy = true,
+	lazy = false,
 	build = function()
 		require("nvim-treesitter.install").update({ with_sync = true })()
 	end,
@@ -16,7 +16,7 @@ return {
 				enable = true,
 				disable = {"go"},
 				-- To prevent duplicate highlights and slowing down the editor
-				additional_vim_regex_highlighting = false,
+                additional_vim_regex_highlighting = false,
 			},
 			indent = { enable = true },
 		})
