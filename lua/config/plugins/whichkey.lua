@@ -6,6 +6,7 @@ whichkey.add({
     { "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Toggle file tree (explorer)", mode = "n" },
     { "<leader>t", "<cmd>ToggleTerm size=20<cr>", desc = "Toggle terminal", mode = "n" },
     { "<leader>t", "<cmd>ToggleTerm size=20<cr>", desc = "Toggle terminal", mode = "t" }, -- For terminal mode
+    { "<leader>z", function() Snacks.zen.zen() end, desc = "Zen", mode = "n" },
 })
 
 -- Plugin management
