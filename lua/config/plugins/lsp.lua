@@ -37,7 +37,11 @@ local servers = {
 	},
 }
 
+-- To make sure we request all LSP server capabilities
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
 local lspconfig = require("lspconfig")
 for server, config in pairs(servers) do
+    config['capabilities'] = capabilities
 	lspconfig[server].setup(config)
 end
