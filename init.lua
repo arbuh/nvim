@@ -9,3 +9,4 @@ for name, type in vim.fs.dir(vim.fn.stdpath("config") .. "/lua/config/plugins") 
 		require("config.plugins." .. module_name)
 	end
 end
+
