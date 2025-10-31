@@ -21,8 +21,8 @@ local builtin = require('telescope.builtin')
 whichkey.add({
     { "<leader>f", group = "Search" },
     { "<leader>ff", builtin.find_files, desc = "Search for files", mode = "n" },
-    { "<leader>fb", builtin.buffers, desc = "List current buffers", mode = "n" },
-    { "<leader>b", builtin.grep_string, desc = "Search for current selection/cursor", mode = "n" },
+    { "<leader>b", builtin.buffers, desc = "List current buffers", mode = "n" },
+    { "<leader>fw", builtin.grep_string, desc = "Search for current selection/cursor", mode = "n" },
     { "<leader>fg", builtin.live_grep, desc = "Live grep", mode = "n" },
     { "<leader>fo", builtin.oldfiles, desc = "Search for previously opened files", mode = "n" },
     { "<leader>fl", builtin.lsp_dynamic_workspace_symbols, desc = "Search for LSP symbols", mode = "n" },
