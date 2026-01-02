@@ -8,6 +8,7 @@ conform.setup({
 		java = { "google-java-format" },
 		json = { "jq" },
 		lua = { "stylua" },
+		rust = { "rustfmt" },
 	},
 })
 
@@ -16,6 +17,7 @@ mason_installer.setup({
 		"goimports",
 		"google-java-format",
 		"jq",
+		"rustfmt",
 		"stylua",
 	},
 	auto_update = true,
