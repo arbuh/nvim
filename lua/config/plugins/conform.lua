@@ -6,9 +6,11 @@ conform.setup({
 		-- Make sure you have the formatters installed below via mason-tool-installer!
 		go = { "goimports" },
 		java = { "google-java-format" },
+		javascript = { "prettier" },
 		json = { "jq" },
 		lua = { "stylua" },
 		rust = { "rustfmt" },
+		typescript = { "prettier" },
 	},
 })
 
@@ -17,6 +19,7 @@ mason_installer.setup({
 		"goimports",
 		"google-java-format",
 		"jq",
+		"prettier",
 		"rustfmt",
 		"stylua",
 	},

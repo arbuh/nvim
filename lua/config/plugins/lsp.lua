@@ -4,7 +4,7 @@ require("mason").setup()
 -- because it provides automatic LSP configuration and it is official well-integrated solution
 mason_lspconfig = require("mason-lspconfig")
 
-servers = { "gopls", "jdtls", "lua_ls", "pyright", "rust_analyzer" }
+servers = { "gopls", "jdtls", "lua_ls", "pyright", "rust_analyzer", "ts_ls" }
 
 mason_lspconfig.setup({
 	ensure_installed = servers,

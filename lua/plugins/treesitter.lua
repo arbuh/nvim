@@ -10,13 +10,27 @@ return {
 
 		configs.setup({
 			auto_install = true,
-			ensure_installed = { "go", "java", "kotlin", "lua", "markdown", "python", "scala", "vim", "vimdoc" },
+			ensure_installed = {
+                "css",
+				"go",
+                "html",
+				"java",
+				"javascript",
+				"kotlin",
+				"lua",
+				"markdown",
+				"python",
+				"scala",
+				"typescript",
+				"vim",
+				"vimdoc",
+			},
 			sync_install = false,
 			highlight = {
 				enable = true,
-				disable = {"go"},
+				disable = { "go" },
 				-- To prevent duplicate highlights and slowing down the editor
-                additional_vim_regex_highlighting = false,
+				additional_vim_regex_highlighting = false,
 			},
 			indent = { enable = true },
 		})
