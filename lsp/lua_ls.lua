@@ -1,14 +1,15 @@
 -- Find all the available configs here: https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 return {
-	cmd = { "typescript-language-server", "--stdio" },
-	filetypes = {
-		"javascript",
-		"javascriptreact",
-		"typescript",
-		"typescriptreact",
-	},
+	cmd = { "lua-language-server" },
+	filetypes = { "lua" },
 	root_markers = {
-		"package.json",
+		".luarc.json",
+		".luarc.jsonc",
+		".luacheckrc",
+		".stylua.toml",
+		"stylua.toml",
+		"selene.toml",
+		"selene.yml",
 		".git",
 	},
 	settings = {},
