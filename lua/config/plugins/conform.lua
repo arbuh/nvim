@@ -9,7 +9,7 @@ conform.setup({
 		javascript = { "prettier" },
 		json = { "jq" },
 		lua = { "stylua" },
-		rust = { "rustfmt" },
+		-- rust = { "rustfmt" },
 		typescript = { "prettier" },
 	},
 })
@@ -20,7 +20,7 @@ mason_installer.setup({
 		"google-java-format",
 		"jq",
 		"prettier",
-		"rustfmt",
+		-- "rustfmt",
 		"stylua",
 	},
 	auto_update = true,
